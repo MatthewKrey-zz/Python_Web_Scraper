@@ -1,23 +1,28 @@
 # This experiment will explore web scraping images via reference links
-# from a Wikipedia page Notes section w/o BeautifulSoup
+# from a Wikipedia page Notes section w/o BeautifulSoup & w/ Regular Expressions
 
-from bs4 import BeautifulSoup
-from urllib import urlopen
+import urllib2
+from urllib2 import urlopen
+import re
+import cookielib, urllib2
+from cookielib import CookieJar
+import datetime
 
-# make this WikiImageScraper class for scaling to scrape other wiki pages
+cj = CookieJar() # in case site requires storage of cookies
+opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+opener.addheaders = [('User-agent'), 'Mozilla/5.0'] # do not visit as robot
 
-BASE_URL = "https://en.wikipedia.org/wiki/Cancer"
+def main():
+    try:
+        page = "https://en.wikipedia.org/wiki/Cancer"
+        sourceCode = opener.open(page).read()
 
-def make_soup(url):
-    html = urlopen(url.read())
-    return BeautifulSoup(html, "lxml")
+        try:
 
-def get_notes_images(section_url):
-    html = urlopen(section_url).read()
-    soup = make_soup(section_url)
-    notes_images = soup.find("div", {"id": "bodyContent"}) # need to identify anchor tags for each external text
-    # pseudo code placeholder for assigning notes_image_links
-    # notes_image_links = [ BASE_URL + {li.a["rel"], class="external text", a.["href"]} ]
-    return notes_image_links
+        except Exception, e:
+            print str(e)
 
-# get_notes_images(section_url)
+    except Exception, e:
+        print str(e)
+
+main()
