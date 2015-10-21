@@ -18,6 +18,7 @@ def main():
         sourceCode = opener.open(page).read()
 
         try:
+            
 
         except Exception, e:
             print str(e)

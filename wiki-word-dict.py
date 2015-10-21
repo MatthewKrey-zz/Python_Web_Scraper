@@ -1,11 +1,14 @@
 # This solution will explore the use of:
 # BeautifulSoup & lxml libraries for HTML/XML Parsing
-# urllib for making HTTP Requests
+# urllib & requests for making HTTP Requests
+# bleach for HTML validation & removing unwanted elements
 
 # make this a WikiScraper class for scaling to scrape other wiki pages
 
 from bs4 import BeautifulSoup
 from urllib import urlopen
+import bleach
+
 
 BASE_URL = "https://en.wikipedia.org/wiki/Cancer"
 
