@@ -9,8 +9,12 @@ from urllib import urlopen
 
 BASE_URL = "https://en.wikipedia.org/wiki/Cancer"
 
+def make_soup(url):
+    html = urlopen(url.read())
+    return BeautifulSoup(html, "lxml")
+
 def get_body_content(section_url):
     html = urlopen(section_url).read()
-    soup = BeautifulSoup(html, "lxml")
+    soup = make_soup(section_url)
     body_content = soup.find("div", {"id": "bodyContent"})
     #category_links = [BASE_URL + ]
