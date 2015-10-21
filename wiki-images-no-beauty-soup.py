@@ -1,6 +1,5 @@
-# This experiment will explore the use of:
-# BeautifulSoup & lxml libraries for HTML/XML Parsing
-# urllib for making HTTP Requests
+# This experiment will explore web scraping images via reference links
+# from a Wikipedia page Notes section w/o BeautifulSoup
 
 from bs4 import BeautifulSoup
 from urllib import urlopen
