@@ -35,4 +35,4 @@ class WikiDataFrame(object):
 
 
 wiki_word_dictionary = WikiScrape("Cancer").get_word_count()
-print WikiDataFrame(wiki_word_dictionary).dict_to_dataframe().to_csv('wiki_word_dictionary.csv', sep=':', index=False, index_label=None)
+eprint WikiDataFrame(wiki_word_dictionary).dict_to_dataframe().to_csv('wiki_word_dictionary.csv', sep=':', index=False, index_label=None)
