@@ -6,7 +6,8 @@ import re
 from bs4 import BeautifulSoup
 from IPython import embed
 
-BASE_URL = "http://www.surfline.com/home/index.cfm"
+# Place the URL you wish to crawl here 
+BASE_URL = "https://en.wikipedia.org/wiki/Cancer"
 
 def make_soup(BASE_URL):
     html = urllib.urlopen(BASE_URL).read()
