@@ -1,22 +1,40 @@
 # This experiment will explore the use of:
 # BeautifulSoup & lxml libraries for HTML/XML Parsing
 # urllib for making HTTP Requests
-import wikipedia
+
+from bs4 import BeautifulSoup
+import requests
+import urllib2
+from urllib2 import urlopen
 import re
-from collections import Counter
+import cookielib, urllib2
+from cookielib import CookieJar
+import datetime
 
-class WikiScrape(object):
-    def __init__(self, page_title):
-        self.content = wikipedia.page(page_title).references
+BASE_URL = "https://en.wikipedia.org/wiki/Cancer"
 
-    def get_references(self):
-        return self.references
+def make_soup(BASE_URL):
+    html = urlopen(BASE_URL).read()
+    return BeautifulSoup(html, "lxml")
 
-    def get_words(self):
-        return re.findall("[a-zA-Z]+", self.content)
+def get_notes_images(BASE_URL):
+    soup = make_soup(BASE_URL)
+    references = soup.findAll("ol", "references")
+    return references
 
-    def get_word_count(self):
-        content_word_list = self.get_words()
-        return Counter(content_word_list)
+def main():
+    try:
+        page = get_notes_images(BASE_URL)
 
-print WikiScrape("Cancer")
+        try:
+            links = re.findall(r'<a.*?href="(.*?)"', s, page)
+            for link in links:
+                print link
+
+        except Exception, e:
+            print str(e)
+
+    except Exception, e:
+        print str(e)
+
+main()
