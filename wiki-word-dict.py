@@ -1,24 +1,22 @@
-# This solution will explore the use of:
-# BeautifulSoup & lxml libraries for HTML/XML Parsing
-# urllib & requests for making HTTP Requests
-# bleach for HTML validation & removing unwanted elements
+# This solution will explore a quick & dirty wiki page scrape
+# with the Wikipedia Python library & regular expressions
 
-# make this a WikiScraper class for scaling to scrape other wiki pages
+import wikipedia
+import re
+from collections import Counter
 
-from bs4 import BeautifulSoup
-from urllib import urlopen
-import bleach
+class WikiScrape(object):
+    def __init__(self, page_title):
+        self.content = wikipedia.page(page_title).content
 
+    def get_content(self):
+        return self.content
 
-BASE_URL = "https://en.wikipedia.org/wiki/Cancer"
+    def get_words(self):
+        return re.findall("[a-zA-Z]+", self.content)
 
-def make_soup(BASE_URL):
-    html = urlopen(BASE_URL).read()
-    return BeautifulSoup(html, "lxml")
+    def get_word_count(self):
+        content_word_list = self.get_words()
+        return Counter(content_word_list)
 
-def get_body_content(BASE_URL):
-    soup = make_soup(BASE_URL)
-    body_content = soup.find("div", {"id": "bodyContent"})
-    return body_content
-
-get_body_content(BASE_URL)
+print WikiScrape("Cancer").get_word_count()
