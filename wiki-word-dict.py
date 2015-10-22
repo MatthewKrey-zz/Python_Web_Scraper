@@ -18,9 +18,10 @@ def make_soup(BASE_URL):
 
 def get_body_content(BASE_URL):
     soup = make_soup(BASE_URL)
-    body_content = soup.find_all("div", {"id": "bodyContent"}, text='b' ) # returns collection of HTML tag objects
-    return body_content.get_text().splitlines()
-
+    body_content = soup.find_all("div", {"id": "bodyContent"}) # returns collection of HTML tag objects
+    body_content_words = {}
+    for word in body_content_words:
+        print body_content_words[word.get_text()]
 
 #def _bleach_html(BASE_URL)
 
