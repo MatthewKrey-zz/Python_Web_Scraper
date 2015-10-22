@@ -1,4 +1,5 @@
-# This solution will explore a quick & dirty wiki page scrape w/ the Wikipedia Python library
+# This solution will explore a quick & dirty wiki page scrape
+# with the Wikipedia Python library & regular expressions
 
 import wikipedia
 import re
@@ -18,7 +19,4 @@ class WikiScrape(object):
         content_word_list = self.get_words()
         return Counter(content_word_list)
 
-
-#WikiScrape("Cancer").get_content()
-#Counter(WikiScrape("Cancer").get_words())
 print WikiScrape("Cancer").get_word_count()
