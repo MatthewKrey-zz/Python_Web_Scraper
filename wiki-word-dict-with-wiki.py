@@ -1,6 +1,8 @@
 # This solution will explore a quick & dirty wiki page scrape
 # with the Wikipedia Python library & regular expressions
 
+<div class="reflist columns references-column-count references-column-count-2">
+
 import wikipedia
 import re
 from collections import Counter
