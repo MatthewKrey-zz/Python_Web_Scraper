@@ -1,0 +1,4386 @@
+
+
+
+
+
+<!---1 -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+	<!-- pakID: 19 -->
+
+
+
+
+
+<head>
+
+
+
+	
+	<script src="//cdn.optimizely.com/js/1770161816.js"></script>
+
+	<title>Surfline Premium Member Subscription Sign Up | SURFLINE.COM</title>
+
+	
+	<meta name="description" content="Sign up for a premium member subscription today. Within seconds, you will see HD surf cams, get long range surf forecasts, and activate surf and travel discounts." />
+	<meta name="keywords" content="surfline premium, surfline subscription, surfline sign up, join surfline, surfline membership, premium member" />
+
+
+
+	<meta name="classification" content="general" />
+	<link rel="canonical" href="https://www.surfline.com/subscribe_vindicia/index.cfm" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="robots" content="index, no follow" />
+	<meta name="distribution" content="Global" />
+
+    
+    
+
+	
+
+
+    
+
+<link type="text/css" href="/scripts/themes/base/ui.all.css" rel="stylesheet" media="screen" />
+<link type="text/css" href="/scripts/themes/base/jquery-ui-1.7.custom.css" rel="stylesheet" media="screen" />
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+
+<script type="text/javascript" src="/scripts/ui/ui.core.js"></script>
+<script type="text/javascript" src="/scripts/ui/ui.draggable.js"></script>
+<script type="text/javascript" src="/scripts/ui/ui.resizable.js"></script>
+<script type="text/javascript" src="/scripts/ui/ui.dialog.js"></script>
+<script type="text/javascript" src="/scripts/external/bgiframe/jquery.bgiframe.js"></script>
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+	
+
+		
+		
+		
+		
+		
+		
+
+	
+
+	
+
+		
+		
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+		
+	
+
+	
+	
+		
+
+	
+
+	
+
+	
+
+		
+	
+
+		
+		
+
+	
+	
+	
+	
+	
+
+
+
+
+    
+
+	
+
+	
+
+	
+
+	
+
+
+	
+	
+
+	
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript">
+var btState = true;
+
+function buttonStateVal(val) {
+btState = val;
+
+if (val == "false")
+	{
+	setTimeout("buttonStateVal('true')",5000);
+	}
+
+}
+</script>
+
+<script type="text/javascript">
+
+var funnelStep = function () {
+	var thisFunnelStep = "";
+	if(jQuery("#stage1").is(":visible")) {
+		thisFunnelStep = "Viewed Funnel Step One";
+	} else if (jQuery("#stage2").is(":visible")) {
+		thisFunnelStep = "Viewed Funnel Step Two";
+	} else if (jQuery("#stage3").is(":visible")) {
+		thisFunnelStep = "Viewed Funnel Step Three";
+	} else if (jQuery("#stage4").is(":visible")) {
+		thisFunnelStep = "Viewed Funnel Step Four";
+	} else if (jQuery("#stage5").is(":visible")) {
+		thisFunnelStep = "Viewed Funnel Step Five";
+	} else {
+		// Lets keep looking... current stepText will be of the last step
+		try {
+			var thisStepText = jQuery("#stepText").text();
+			if(thisStepText.indexOf("Step 1:") != -1){
+				thisFunnelStep = "Viewed Funnel Step Two";
+			} else if (thisStepText.indexOf("Step 2:") != -1) {
+				thisFunnelStep = "Viewed Funnel Step Three";
+			} else if (thisStepText.indexOf("Step 3:") != -1) {
+				thisFunnelStep = "Viewed Funnel Step Four";
+			} else if (thisStepText.indexOf("Step 4:") != -1) {
+				thisFunnelStep = "Viewed Funnel Step Five";
+			};
+		} catch (err){
+			if(console){ 
+				console.log("ISSUE WITH KM TRACKING",err );
+			};
+		};
+ 	};
+
+ 	
+		
+		
+		
+
+	if(console){ console.log("STEP::",thisFunnelStep );};
+	if(thisFunnelStep != ""){
+		var reportAddToFavorites = newKissSl(kisssl);
+		reportAddToFavorites.init({
+		    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+		    callback: function(){
+		        var globalVars = this.userDataObj;
+		        if(console){
+		            console.log("globalVars: ", globalVars);
+		        };
+		        _kmq.push(['record', thisFunnelStep, globalVars]);
+		    }
+		});
+	}; 
+};
+
+jQuery(function(){
+	/* This is to track the first funnel step viewed */
+	funnelStep();
+});
+
+
+
+function destroyExtraDivs(divID) {
+
+divCount = 0;
+theCounter = $('div[id=' + divID + ']').size();
+$('div[id=' + divID + ']').each(
+
+	function() {
+	
+		divCount++;
+		
+		if(divCount < theCounter) {
+		$(this).remove();
+		}
+	
+	}
+
+);
+
+}
+
+var stage1Refreshed = false;
+
+function reloadStage1() {
+
+if(stage1Refreshed == false) {
+
+$('#stage1Submit').attr("disabled",true);
+$('#stage1Content').html('<div style="padding-top:100px;padding-left:40px;"><b>Refreshing your data... </b> <img id="loader" src="/scripts/ajax-loader.gif" width="18px" height="18px"></div>');
+
+	 $.ajax({
+	   type: "GET",
+	   url: "/subscribe_vindicia/inc_step1_display.cfm",
+	   data: "refresh=true",
+	   success: function(msg){
+		$('#stage1Content').html(msg);
+		$('#stage1Submit').attr("disabled",false);
+	   }
+	 });
+
+stage1Refreshed = true;
+destroyExtraDivs('stage1Content')
+}	 
+
+}
+
+function trackViewORIG(stepNum,subscription) {
+ if(!stepNum) {
+ stepNum = 1;
+ }
+stepNum = parseInt(stepNum);
+
+if(!subscription) {
+ subscription = 0;
+ }
+subscription = parseInt(subscription);
+
+//alert("stepNum " + stepNum + "-" + "subscription " + subscription);
+
+if(stepNum == 5 && subscription == 0) {
+var pageNameInfo = document.getElementById('stageErrorPageName').innerHTML;
+}
+
+else {
+var pageNameInfo = document.getElementById('stage' + stepNum + 'PageName').innerHTML;
+}
+
+$('#trackingDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_pages.cfm?navbeansub=funnel%20FREETRIAL&pageName=' + escape(pageNameInfo) + '&step=' + stepNum + '&subscription=' + subscription + '" width="1px" height="1px" frameborder="0"></iframe>');
+	 
+ }
+
+function trackView(stepNum,subscription) {
+	//included at bottom of index.cfm as omniture_track_js.cfm
+	sendTrackingData(stepNum,subscription);
+}
+
+
+
+//OLD ExactTarget method - remove
+function setEmailID(email) {
+
+$('#hiddenActionDiv').html('<iframe src="/subscribe_vindicia/inc_set_email_id.cfm?requestTimeout=100&email=' + email + '" width="1px" height="1px" frameborder="0"></iframe>');
+
+}
+
+
+
+
+function handleSub(val1,val2) {
+$('#hiddenActionDiv').html('<div style="padding-top:100px;padding-left:40px;"><b>Logging In...</b> <img id="loader" src="/scripts/ajax-loader.gif" width="18px" height="18px"></div>');
+
+$('#hiddenActionDiv').html('<iframe src="/subscribe_vindicia/include/inc_handle_user.cfm?requestTimeout=100&val1=' + val1 + '&val2=' + val2 + '" width="1px" height="1px" frameborder="0"></iframe>');
+
+}
+
+function bwTrack(trkType) {
+
+$('#googleBWTrackingDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_google_bw.cfm?trkType=' + trkType + '" width="1px" height="1px" frameborder="0"></iframe>');
+
+}
+
+function googleTrack(subscription,siteID) {
+if(!subscription) {
+subscription = 1;
+}
+subscription = parseInt(subscription);
+
+if(!siteID) {
+siteID = 1;
+}
+siteID = parseInt(siteID);
+
+$('#googleTrackingDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_google.cfm?subscription=' + subscription + '&siteID=' + siteID + '" width="1px" height="1px" frameborder="0"></iframe>');
+
+}
+
+//bw only
+function bingTrack() {
+$('#bingTrackingDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_bing.cfm" width="1px" height="1px" frameborder="0"></iframe>');
+}
+
+//sl trial only 
+function adRollTrack() {
+$('#bingTrackingDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_adroll.cfm" width="1px" height="1px" frameborder="0"></iframe>');
+}
+
+
+//bw trial only 
+function adRollTrackBW() {
+$('#bingTrackingDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_adroll_buoyweather.cfm" width="1px" height="1px" frameborder="0"></iframe>');
+}
+
+//fs trial only 
+function adRollTrackFS() {
+$('#bingTrackingDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_adroll_fishtrack.cfm" width="1px" height="1px" frameborder="0"></iframe>');
+}
+
+// Surfline Facebook Pixel
+function showFacebookPixelSurfline(promoCode)
+{
+	if(console){console.log('CALLING showFacebookPixelSurfline');}
+	$('#facebookPixelSurflineDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_facebook_surfline.cfm?promoCode=' + promoCode + '" width="1px" height="1px" frameborder="0"></iframe>');
+}
+
+// FishTrack Facebook Pixel
+function showFacebookPixelFishTrack()
+{
+	if(console){console.log('CALLING showFacebookPixelFishTrack');}
+	$('#facebookPixelFishTrackDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_facebook_fishtrack.cfm" width="1px" height="1px" frameborder="0"></iframe>');
+}
+
+// Buoyweather Facebook Pixel
+function showFacebookPixelBuoyweather()
+{
+	if(console){console.log('CALLING showFacebookPixelBuoyweather');}
+	$('#facebookPixelBuoyweatherDiv').html('<iframe src="/subscribe_vindicia/include/inc_track_facebook_buoyweather.cfm" width="1px" height="1px" frameborder="0"></iframe>');
+}
+
+
+function loadPayDetailsHeader(subscription_id) {
+destroyExtraDivs('paymentHeaderDetails')
+subscription_id = parseInt(subscription_id);
+$("#paymentHeaderDetails").load('include/inc_pay_header_details.cfm?subscription_id=' +subscription_id);
+}
+
+function loadPayDetailsFooter(subscription_id) {
+destroyExtraDivs('paymentFooterDetails')
+subscription_id = parseInt(subscription_id);
+$("#paymentFooterDetails").load('include/inc_pay_footer_details.cfm?subscription_id=' +subscription_id);
+}
+
+function loadABContents(stage) {
+
+var contents = document.getElementById('stage' + stage + 'ABContent').innerHTML;
+$("#ab_display_content").html(contents);
+
+}
+
+
+function showTestUser(msg) {
+
+if(!msg) {
+msg = "";
+}
+else {
+}
+
+$('#testUserCaption').html('Login to validate yourself as a test user');
+
+$("#stage4").fadeOut("normal",function()  { 
+			$("#stage4").slideUp("slow",function()  { 
+				$("#stageValidateTestUser").fadeIn("slow");
+				$("#stepText").fadeTo(200,0.1,function() { 
+					$("#stepText").html('Validate Test User '+msg).fadeTo(900,1);
+				});			
+			});	
+		});		
+
+$("#username_test_user").focus();
+}
+
+
+function hideTestUser() {
+
+$("#stageValidateTestUser").fadeOut("normal",function()  { 
+			$("#stageValidateTestUser").slideUp("slow",function()  { 
+				$("#stage4").fadeIn("slow");
+				$("#stepText").fadeTo(200,0.1,function() { 
+					$("#stepText").html('Step 4: Complete Membership Transaction').fadeTo(900,1);
+				});			
+			});	
+		});		
+
+setTimeout("focusCC()",1500);
+}
+
+function focusCC() {
+$("#cc").focus();
+}
+
+function showLogin(msg) {
+
+if(!msg) {
+msg = "";
+}
+else {
+}
+
+var typed_email = $("#email").val();
+//alert(typed_email);
+
+if(typed_email == '') {
+$("#loginCaption").html('<div style="text-align:left;padding-left:200px;padding-bottom:10px;">Please login to your account using the form below.</div>');
+	var funnelConvertToLogin = newKissSl(kisssl);
+	funnelConvertToLogin.init({
+		"SiteCatalyst": (typeof s !== 'undefined')?s:{},
+		callback: function(){
+			if(console){
+				console.log("Funnel Convert to Login ");
+			};
+			_kmq.push(['record', "Funnel Convert to Login", this.userDataObj]);
+		}
+	});
+} else {
+	$("#loginCaption").html('Your email matches an existing account<br />Please login to continue with this email');
+	var funnelConvertToLoginTwo = newKissSl(kisssl);
+	funnelConvertToLoginTwo.init({
+		"SiteCatalyst": (typeof s !== 'undefined')?s:{},
+		callback: function(){
+			if(console){
+				console.log("Funnel Convert to Login ");
+			};
+			_kmq.push(['record', "Funnel Convert to Login", this.userDataObj]);
+		}
+	});
+}
+
+$("#email_login").val(typed_email);
+$("#stage1").fadeOut("normal",function()  { 
+			$("#stage1").slideUp("slow",function()  { 
+				$("#stageLogin").fadeIn("slow");
+				$("#stepText").fadeTo(200,0.1,function() { 
+					$("#stepText").html('Login '+msg).fadeTo(900,1);
+				});			
+			});	
+		});		
+
+var userExists = false
+
+emailConfirmSuccess = false;
+passwordSuccess = false;
+passwordConfirmSuccess = false;
+
+$("#email").val('');
+$("#confirm_email").val('');
+$("#password").val('');
+$("#confirm_password").val('');
+
+$("#emailMessageBox").empty();
+$("#emailConfirmMessageBox").empty();
+$("#passwordMessageBox").empty();
+$("#confirmPasswordMessageBox").empty();
+
+$("#password_login").focus();
+}
+
+function hideLogin() {
+
+$("#stageLogin").fadeOut("normal",function()  { 
+			$("#stageLogin").slideUp("slow",function()  { 
+				$("#stage1").fadeIn("slow");
+				$("#stepText").fadeTo(200,0.1,function() { 
+					$("#stepText").html('Step 1: Create Your Membership').fadeTo(900,1);
+				});			
+			});	
+		});		
+
+setTimeout("focusEmail()",1500);
+}
+
+function focusEmail() {
+$("#email").focus();
+}
+
+function validateCVVCode() {
+	var cvvCode = document.getElementById('cvv').value;
+	cvvCode = stripAlphaChars(cvvCode);
+	document.getElementById('cvv').value = cvvCode;
+
+	var cardNum = document.getElementById('cc').value;
+	
+	var lengthTest = 3;
+
+	if (cardNum.length > 0) {
+		if(cardNum.substring(0,1)=="3") {
+		lengthTest = 4;
+		}
+	}
+	
+	if(cvvCode.length < lengthTest) {
+	return false;
+	}
+	else {
+	return true;
+	}
+
+}
+
+
+function stripAlphaChars(pstrSource)
+{
+var m_strOut = new String(pstrSource);
+m_strOut = m_strOut.replace(/[^0-9]/g, '');
+return m_strOut;
+}
+
+var processCompleted = false;
+
+function handleFailedProcess() {
+
+	 if(processCompleted == false) {
+
+	var contents = document.getElementById('failedProcessMessage').innerHTML;
+	$('#subFormElements').html(contents);
+				
+		//$('#subFormElements').html('<b>Your transaction has timed out.</b><br /><br /><a href="/subscribe_vindicia/index.cfm?mkt=login&slintcid=LOGIN&slcmpname=LOGIN-MODALimages/surfline-funnel-logo2.gif">Click Here</a> to test if your transaction has been successful.<br />');
+	}
+
+ }
+ 
+ var countdownSecs = 0;
+ 
+ function processCountDown() {
+ 
+ if(processCompleted == false) {
+ 
+	 if(countdownSecs <= 120) {
+	 $('#subFormElements').html('<div style="padding-top:100px;padding-left:40px;"><b>Processing your transaction</b> <img id="loader" src="/scripts/ajax-loader.gif" width="18px" height="18px"><br /><br />Please allow at least 120 seconds for this transaction to complete.<br /><br /><br /><b>Elapsed Processing Time:</b> ' + countdownSecs + ' seconds.</div>');
+	
+	setTimeout("processCountDown()",1000);
+	}
+	
+	else {
+	$('#subFormElements').html('<div style="padding-top:100px;padding-left:40px;"><b>Processing your transaction</b> <img id="loader" src="/scripts/ajax-loader.gif" width="18px" height="18px"><br /><br />Please allow at least 120 seconds for this transaction to complete.<br /><br /><br /><b>Elapsed Processing Time:</b> Timeout reached...</div>');
+	}
+
+}
+
+countdownSecs = countdownSecs + 1;
+
+ }
+
+
+
+$(document).ready(function()
+{
+// global vars 
+
+
+
+	
+	emailConfirmSuccess = false;
+	
+	
+	
+	passwordSuccess = false
+	passwordConfirmSuccess = false;
+	
+
+	
+	zipSuccess = false;
+	
+	
+			
+	firstNameSuccess = false;
+	
+
+	
+	lastNameSuccess = false;	
+	
+		
+	
+	address1Success = false;
+		
+	
+	
+	citySuccess = false;
+			
+	
+	
+	phoneSuccess = false;
+				
+	
+
+	
+	// remove message if someone reclicks on it
+	$("#email").focus(function() {
+			$("#emailMessageBox").empty();
+	});
+	
+	// move away from email text box
+	$("#email").blur(function()
+	{
+		var email = $("#email").val();
+		
+		var loadURL = '/subscribe_vindicia/email_availability.cfm?email=';
+		if(email != 0 && email != "")
+			{
+
+
+			if(isValidEmailAddress(email))
+			{
+
+			var userExists = false;
+			var checkExistingSubURL = '?email=';
+
+			$("#emailMessageBox").show();
+			$('#emailMessageBox').html('<img id="loader" src="/scripts/ajax-loader.gif" width="18px" heigh="18px">')
+
+			 $.ajax({
+			   type: "GET",
+			   url: "/subscribe_vindicia/inc_detect_existing_sub.cfm",
+			   data: "email=" + email,
+			   success: function(msg){
+
+				var userExists = false;
+
+				 if(msg.indexOf('expired') != -1 || msg.indexOf('active') != -1 || msg.indexOf('registered') != -1) {
+
+						loginVal = '';
+						
+						if (msg.indexOf('expired') != -1) {
+						loginVal = 'Expired Premium Member';
+						}
+						else if (msg.indexOf('active') != -1) {
+						loginVal = 'Active Premium Member'
+						}
+						else if (msg.indexOf('registered') != -1) {
+						loginVal = 'Registered Member'
+						}						
+
+						
+						setTimeout("showLogin(loginVal)",500);
+						$("#emailMessageBox").empty();
+						$('#emailMessageBox').html('')				 
+						$("#emailMessageBox").fadeOut("slow");															
+						
+						
+						var userExists = true;
+				 }
+
+				else {
+
+					// use ajax to check surfline DB for duplicates
+					$("#emailMessageBox").show();
+					$('#emailMessageBox').html('<img id="loader" src="/scripts/ajax-loader.gif" width="18px" heigh="18px">')
+					$("#emailMessageBox").load(loadURL + email, function() { 
+						$("#emailMessageBox").hide();
+						$("#emailMessageBox").fadeIn("slow");															  	
+					});				
+				
+				}
+
+			   }
+			 });
+
+					// use ajax to check surfline DB for duplicates
+					//$("#emailMessageBox").show();
+					//$('#emailMessageBox').html('<img id="loader" src="/scripts/ajax-loader.gif" width="18px" heigh="18px">')
+					//$("#emailMessageBox").load(loadURL + email, function() { 
+						//$("#emailMessageBox").hide();
+						//$("#emailMessageBox").fadeIn("slow");															  	
+					//});
+					
+				} // isValidEmail.. 
+				
+				else
+				
+				{
+					//alert("email is not in valid format");
+					$("#emailMessageBox").fadeTo(200,0.1,function() 
+						{ 
+					  	$("#emailMessageBox").html('<span class="messageboxerror"> Email not in a valid format</span>').fadeTo(900,1);
+					  	var emailNotValidOne = newKissSl(kisssl);
+						emailNotValidOne.init({
+						    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+						    callback: function(){
+						        var globalVars = this.userDataObj;
+						        globalVars["Form Name"] = "Funnel Step One";
+						        globalVars["Field Name"] = "Email";
+						        globalVars["Error"] = "Email not in a valid format";
+						        if(console){
+						            console.log("Form error, globalVars: ", globalVars);
+						        };
+						        _kmq.push(['record', "Form Validation Error", globalVars]);
+						    }
+						});
+					});	
+				}
+				
+			} else {
+
+					$("#emailMessageBox").fadeTo(200,0.1,function() 
+						{ 
+					  	$("#emailMessageBox").html('<span class="messageboxerror"> Email not in a valid format</span>').fadeTo(900,1);
+					  	var emailNotValidTwo = newKissSl(kisssl);
+						emailNotValidTwo.init({
+						    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+						    callback: function(){
+						        var globalVars = this.userDataObj;
+						        globalVars["Form Name"] = "Funnel Step One";
+						        globalVars["Field Name"] = "Email";
+						        globalVars["Error"] = "Email not in a valid format";
+						        if(console){
+						            console.log("Form error, globalVars: ", globalVars);
+						        };
+						        _kmq.push(['record', "Form Validation Error", globalVars]);
+						    }
+						});
+					});	
+
+			}	
+	});
+	
+	
+	
+	
+	
+//	Confirm the email address
+	$("#confirm_email").focus(function() {
+			$("#emailConfirmMessageBox").empty();
+		});
+	
+	$("#confirm_email").blur(function()
+	{
+		var lastemail = $("#email").val();
+		var confirmEmail = $("#confirm_email").val();
+		
+		if(confirmEmail.length > 0) {
+			if( lastemail != confirmEmail){
+				$("#emailConfirmMessageBox").html('<span class="messageboxerror"> Email does not match</span>').fadeIn("slow");
+				var emailNoMatchKM = newKissSl(kisssl);
+				emailNoMatchKM.init({
+				    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+				    callback: function(){
+				        var globalVars = this.userDataObj;
+				        globalVars["Form Name"] = "Funnel Step One";
+				        globalVars["Field Name"] = "Email";
+				        globalVars["Error"] = "Email does not match";
+				        if(console){
+				            console.log("Form error, globalVars: ", globalVars);
+				        };
+				        _kmq.push(['record', "Form Validation Error", globalVars]);
+				    }
+				});
+				emailConfirmSuccess = false;
+			}
+			
+			else if (isValidEmailAddress(lastemail) == false) {
+				$("#confirm_email").val('');
+				$("#email").focus();
+				emailConfirmSuccess = false;
+			}
+			
+			else{
+				$("#emailConfirmMessageBox").html('<span class="messageboxok"> Email Confirmed</span>').fadeIn("slow");
+				emailConfirmSuccess = true;
+			}
+		}	
+	});
+
+
+// validate passwords are entered
+	$("#password").focus(function() {
+			$("#passwordMessageBox").empty();
+	});
+	$("#confirm_pass").focus(function() {
+							$("#confirmPasswordMessageBox").empty();
+	});
+
+	$("#password").blur(function()
+	{
+		var password = $("#password").val();
+		if(password.length <1){
+			$("#passwordMessageBox").html('<span class="messageboxerror">  Invalid Password</span>').fadeIn("slow");
+			var invalidPasswordKM = newKissSl(kisssl);
+			invalidPasswordKM.init({
+			    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+			    callback: function(){
+			        var globalVars = this.userDataObj;
+			        globalVars["Form Name"] = "Funnel Step One";
+			        globalVars["Field Name"] = "Password";
+			        globalVars["Error"] = "Invalid Password";
+			        if(console){
+			            console.log("Form error, globalVars: ", globalVars);
+			        };
+			        _kmq.push(['record', "Form Validation Error", globalVars]);
+			    }
+			});
+			passwordSuccess = false;
+		}else{
+			$("#passwordMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeIn("slow");
+			passwordSuccess = true;
+		}
+	});
+	
+	$("#confirm_pass").blur(function()
+	{
+		var lastPassword = $("#password").val();
+		var confirm_pass = $("#confirm_pass").val();
+		if( lastPassword != confirm_pass && passwordSuccess == true){
+			$("#confirmPasswordMessageBox").html('<span class="messageboxerror"> Passwords do not match</span>').fadeIn("slow");
+		  	var passwordNoMatchKMone = newKissSl(kisssl);
+			passwordNoMatchKMone.init({
+			    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+			    callback: function(){
+			        var globalVars = this.userDataObj;
+			        globalVars["Form Name"] = "Funnel Step One";
+			        globalVars["Field Name"] = "Passwords";
+			        globalVars["Error"] = "Passwords do not match";
+			        if(console){
+			            console.log("Form error, globalVars: ", globalVars);
+			        };
+			        _kmq.push(['record', "Form Validation Error", globalVars]);
+			    }
+			}); 
+			passwordConfirmSuccess = false;
+		}else if (lastPassword == confirm_pass && lastPassword.length >=1){
+			$("#confirmPasswordMessageBox").html('<span class="messageboxok"> Password Confirmed</span>').fadeIn("slow");
+			passwordConfirmSuccess = true;
+		}
+		else {
+			passwordConfirmSuccess = false;		
+		}
+	});
+	
+
+// validate first name field is entered
+	$("#first_name").focus(function() {
+			$("#firstNameMessageBox").empty();
+			firstNameSuccess = false;
+		});
+	
+	$("#first_name").blur(function()
+	{
+	var first_name = $("#first_name").val();
+		if(first_name.length <1){
+			$("#firstNameMessageBox").html('<span class="messageboxerror">First Name Required</span>').fadeIn("slow");
+		  	var firstNameRequiredKM = newKissSl(kisssl);
+			firstNameRequiredKM.init({
+			    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+			    callback: function(){
+			        var globalVars = this.userDataObj;
+			        globalVars["Form Name"] = "Funnel Step One";
+			        globalVars["Field Name"] = "First Name";
+			        globalVars["Error"] = "First Name Required";
+			        if(console){
+			            console.log("Form error, globalVars: ", globalVars);
+			        };
+			        _kmq.push(['record', "Form Validation Error", globalVars]);
+			    }
+			}); 
+			firstNameSuccess = false;
+		}else{
+			$("#firstNameMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeIn("slow");
+			firstNameSuccess = true;
+		}
+	});	
+	
+	
+// validate last name field is entered
+	$("#last_name").focus(function() {
+			$("#lastNameMessageBox").empty();
+			lastNameSuccess = false;
+		});
+	
+	$("#last_name").blur(function()
+	{
+	var last_name = $("#last_name").val();
+		if(last_name.length <1){
+			$("#lastNameMessageBox").html('<span class="messageboxerror">Last Name Required</span>').fadeIn("slow");
+		  	var lastNameRequiredKM = newKissSl(kisssl);
+			lastNameRequiredKM.init({
+			    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+			    callback: function(){
+			        var globalVars = this.userDataObj;
+			        globalVars["Form Name"] = "Funnel Step One";
+			        globalVars["Field Name"] = "Last Name";
+			        globalVars["Error"] = "Last Name Required";
+			        if(console){
+			            console.log("Form error, globalVars: ", globalVars);
+			        };
+			        _kmq.push(['record', "Form Validation Error", globalVars]);
+			    }
+			}); 
+			lastNameSuccess = false;
+		}else{
+			$("#lastNameMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeIn("slow");
+			lastNameSuccess = true;
+		}
+	});		
+
+	
+	
+// validate zip field is entered dont use a RegExp confirm since international zip can be crazy
+	$("#zip_code").focus(function() {
+			$("#zipMessageBox").empty();
+			zipSuccess = false;
+		});
+	
+	$("#zip_code").blur(function()
+	{
+	var zip_code = $("#zip_code").val();
+		if(zip_code.length <2){
+			$("#zipMessageBox").html('<span class="messageboxerror">Invalid Zip</span>').fadeIn("slow");
+		  	var invalidZipKMOne = newKissSl(kisssl);
+			invalidZipKMOne.init({
+			    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+			    callback: function(){
+			        var globalVars = this.userDataObj;
+			        globalVars["Form Name"] = "Funnel Step One";
+			        globalVars["Field Name"] = "Zip";
+			        globalVars["Error"] = "Invalid Zip";
+			        if(console){
+			            console.log("Form error, globalVars: ", globalVars);
+			        };
+			        _kmq.push(['record', "Form Validation Error", globalVars]);
+			    }
+			}); 
+			zipSuccess = false;
+		}else{
+			$("#zipMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeIn("slow");
+			zipSuccess = true;
+		}
+	});
+	
+	$("#zip_code2").focus(function() {
+			$("#zip2MessageBox").empty();
+			zipSuccess = false;
+		});
+	
+	$("#zip_code2").blur(function()
+	{
+	var zip_code2 = $("#zip_code2").val();
+		if(zip_code2.length <2){
+			$("#zip2MessageBox").html('<span class="messageboxerror">Invalid Zip</span>').fadeIn("slow");
+		  	var invalidZipKM = newKissSl(kisssl);
+			invalidZipKM.init({
+			    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+			    callback: function(){
+			        var globalVars = this.userDataObj;
+			        globalVars["Form Name"] = "Funnel Step One";
+			        globalVars["Field Name"] = "Zip";
+			        globalVars["Error"] = "Invalid Zip";
+			        if(console){
+			            console.log("Form error, globalVars: ", globalVars);
+			        };
+			        _kmq.push(['record', "Form Validation Error", globalVars]);
+			    }
+			}); 
+			zipSuccess = false;
+		}else{
+			$("#zip2MessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeIn("slow");
+			zipSuccess = true;
+		}
+	});
+
+	
+	
+
+$("#address1").focus(function() {
+		$("#address1MessageBox").empty();
+		address1Success = false;
+	});
+
+$("#address1").blur(function()
+{
+var address1 = $("#address1").val();
+	if(address1.length <1){
+		$("#address1MessageBox").html('<span class="messageboxerror">Address 1 Required</span>').fadeIn("slow");
+	  	var addressOneRequiredKM = newKissSl(kisssl);
+		addressOneRequiredKM.init({
+		    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+		    callback: function(){
+		        var globalVars = this.userDataObj;
+		        globalVars["Form Name"] = "Funnel Step Two";
+		        globalVars["Field Name"] = "Address 1";
+		        globalVars["Error"] = "Address 1 Required";
+		        if(console){
+		            console.log("Form error, globalVars: ", globalVars);
+		        };
+		        _kmq.push(['record', "Form Validation Error", globalVars]);
+		    }
+		}); 
+		address1Success = false;
+	}else{
+		$("#address1MessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeIn("slow");
+		address1Success = true;
+	}
+});	
+
+$("#city").focus(function() {
+		$("#cityMessageBox").empty();
+		citySuccess = false;
+	});
+
+$("#city").blur(function()
+{
+var city = $("#city").val();
+	if(city.length <1){
+		$("#cityMessageBox").html('<span class="messageboxerror">City Required</span>').fadeIn("slow");
+		citySuccess = false;
+	  	var cityInvalidKM = newKissSl(kisssl);
+		cityInvalidKM.init({
+		    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+		    callback: function(){
+		        var globalVars = this.userDataObj;
+		        globalVars["Form Name"] = "Funnel Step Two";
+		        globalVars["Field Name"] = "City";
+		        globalVars["Error"] = "City Required";
+		        if(console){
+		            console.log("Form error, globalVars: ", globalVars);
+		        };
+		        _kmq.push(['record', "Form Validation Error", globalVars]);
+		    }
+		});
+	}else{
+		$("#cityMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeIn("slow");
+		citySuccess = true;
+	}
+});	
+
+	
+	
+$("#phone_no").focus(function() {
+		$("#phoneMessageBox").empty();
+		phoneSuccess = false;
+});	
+	
+$("#phone_no").blur(function() {
+	var phone = $("#phone_no").val();	
+	if(phone != 0)  {
+		if(isValidPhone(phone))  {
+				$("#phoneMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeIn("slow");
+				phoneSuccess = true;
+			//$("#phoneMessageBox").fadeTo(200,0.1,function()  { 
+			//	$("#phoneMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeTo(900,1);
+			//	phoneSuccess = true;
+			//});	
+		} else {
+			$("#phoneMessageBox").fadeTo(200,0.1,function()  { 
+				$("#phoneMessageBox").html('<span class="messageboxerror">Phone Number format is invalid. <BR>Example: (555) 555-5555 ext 5555 </span>').fadeTo(900,1);
+			  	var phoneNumberInvalidKM = newKissSl(kisssl);
+				phoneNumberInvalidKM.init({
+				    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+				    callback: function(){
+				        var globalVars = this.userDataObj;
+				        globalVars["Form Name"] = "Funnel Step Two";
+				        globalVars["Field Name"] = "Phone";
+				        globalVars["Error"] = "Phone Number format is invalid.";
+				        if(console){
+				            console.log("Form error, globalVars: ", globalVars);
+				        };
+				        _kmq.push(['record', "Form Validation Error", globalVars]);
+				    }
+				}); 
+				phoneSuccess = false;
+				});	
+			}
+	} else {
+		$("#phoneMessageBox").fadeTo(200,0.1,function() { 
+			$("#phoneMessageBox").html('<span class="messageboxerror">Phone Number is required</span>').fadeTo(900,1);
+		  	var phoneNumberRequiredKM = newKissSl(kisssl);
+			phoneNumberRequiredKM.init({
+			    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+			    callback: function(){
+			        var globalVars = this.userDataObj;
+			        globalVars["Form Name"] = "Funnel Step Two";
+			        globalVars["Field Name"] = "Phone";
+			        globalVars["Error"] = "Phone Number is required.";
+			        if(console){
+			            console.log("Form error, globalVars: ", globalVars);
+			        };
+			        _kmq.push(['record', "Form Validation Error", globalVars]);
+			    }
+				}); 
+			phoneSuccess = false;
+			});				
+	}
+});	
+
+	
+	
+
+	jQuery(function() {		
+	
+		$('#stage1Back').click(function() { 
+			$("#stage2").fadeOut("normal",function()  { 
+				$("#stage2").slideUp("slow",function()  { 
+					$("#stage1").fadeIn("slow");
+					funnelStep();
+					loadABContents(1);
+					trackView(1);
+					reloadStage1();					
+					$("#stepText").fadeTo(200,0.1,function() { 
+						$("#stepText").html('Step 1: Create Your Membership').fadeTo(900,1);
+					});			
+				});	
+			});		
+		});	
+
+		$('#stage2Back').click(function() { 
+			$("#stage3").fadeOut("normal",function()  { 
+				$("#stage3").slideUp("slow",function()  { 
+					$("#stage2").fadeIn("slow");
+					funnelStep();
+					loadABContents(2);
+					trackView(2);
+					$("#stepText").fadeTo(200,0.1,function() { 
+						$("#stepText").html('Step 2: Your Information').fadeTo(900,1);
+					});			
+				});	
+			});		
+		});	
+		
+		$('#stage3Back').click(function() { 
+			$("#stage4").fadeOut("normal",function()  { 
+				$("#stage4").slideUp("slow",function()  { 
+					$("#stage3").fadeIn("slow");
+					funnelStep();
+					loadABContents(3);
+					trackView(3);
+					$("#stepText").fadeTo(200,0.1,function() { 
+						$("#stepText").html('Step 3: Choose A Membership').fadeTo(900,1);
+					});			
+				});	
+			});		
+		});	
+
+		$('#stage4BackToInfo').click(function() { 
+			$("#stage4").fadeOut("normal",function()  { 
+				$("#stage4").slideUp("slow",function()  { 
+					$("#stage2").fadeIn("slow");
+					loadABContents(2);
+					trackView(2);
+					$("#stepText").fadeTo(200,0.1,function() { 
+						$("#stepText").html('Step 2: Your Information').fadeTo(900,1);
+					});			
+				});	
+			});		
+		});	
+		
+		//TEMPORARY!!!!
+		$('#stage4Back').click(function() { 
+			$("#stage5").fadeOut("normal",function()  { 
+				$("#stage5").slideUp("slow",function()  { 
+					$("#stage4").fadeIn("slow");
+					funnelStep();
+					loadABContents(4);
+					trackView(4);
+					$("#stepText").fadeTo(200,0.1,function() { 
+						$("#stepText").html('Step 4: Complete Membership Transaction').fadeTo(900,1);
+					});			
+				});	
+			});		
+		});			
+
+		$('#changeCC').click(function() { 
+			$("#stage4").fadeOut("normal",function()  { 
+				$("#stage4").slideUp("slow",function()  { 
+					$("#stageUpdateCC").fadeIn("slow");
+
+					$("#stepText").fadeTo(200,0.1,function() { 
+						$("#stepText").html('Update Credit Card Information').fadeTo(900,1);
+					});
+
+				});	
+			});		
+		});
+
+		$('#updateCCCancel').click(function() { 
+			$("#stageUpdateCC").fadeOut("normal",function()  { 
+				$("#stageUpdateCC").slideUp("slow",function()  { 
+					$("#stage4").fadeIn("slow");
+
+					$("#stepText").fadeTo(200,0.1,function() { 
+						$("#stepText").html('Step 4: Complete Membership Transaction').fadeTo(900,1);
+					});	
+
+
+				});	
+			});		
+		});
+		
+	
+	$('#stage1Submit').click(function() { 
+	//$("#top_right_message").html(firstNameSuccess+''+lastNameSuccess+''+zipSuccess+''+passwordConfirmSuccess+''+passwordSuccess+''+emailConfirmSuccess);
+	//alert(firstNameSuccess+''+lastNameSuccess+''+zipSuccess+''+passwordConfirmSuccess+''+passwordSuccess+''+emailConfirmSuccess); 
+	var email = $("#email").val();	
+		
+	$('#stage1Back').attr("disabled", "true");	
+		
+	if(isValidEmailAddress(email) && firstNameSuccess != false && lastNameSuccess != false && zipSuccess != false && passwordConfirmSuccess !=false && passwordSuccess !=false && emailConfirmSuccess != false ){
+		
+				
+		$("#email").blur();
+		$("#password").blur();	
+		
+
+		$("#first_name").blur();
+		$("#last_name").blur();	
+		$("#confirm_email").blur();
+		$("#confirm_pass").blur();	
+		$("#zip_code").blur();	
+		
+		var first_name = $('#first_name').val();
+		var last_name = $('#last_name').val();
+		var submitEmail = $('#confirm_email').val();
+		var submitPassword = $('#confirm_pass').val();
+		var submitZip = $('#zip_code').val();
+		
+		//set zip code value after successful submit for visual purposes.
+		document.getElementById('zip_code_stage2').innerHTML = submitZip;
+		
+		//alert('email=' + submitEmail + '&password=' + submitPassword + '&zip_code=' + submitZip);
+		var URL1 = '/subscribe_vindicia/inc_step1_submit.cfm';	
+		$("#top_right_message").load(URL1 + '?first_name=' + escape(first_name) + '&last_name=' + escape(last_name) + '&email=' + escape(submitEmail) + '&password=' + escape(submitPassword) + '&zip_code=' + escape(submitZip), function() { 
+			$("#top_right_message").fadeIn("slow");	
+		});	
+
+		$("#stage1").fadeOut("slow",function()  { 
+			$("#stage1").slideUp("slow",function()  { 
+				$("#stage2").fadeIn("slow");
+				funnelStep();
+				loadABContents(2);
+				//setTimeout("setEmailID('" + email + "')",18000);
+				trackView(2);
+
+				$("#stepText").fadeTo(200,0.1,function() { 
+					$("#stepText").html('Step 2: Your Information').fadeTo(900,1);
+				});
+
+			});	
+		});
+	
+		} else {  
+			
+		var reqFields = "";
+		
+		if(isValidEmailAddress(email) == false) {
+		reqFields +="\n- Email Address";
+		}
+		
+		if(emailConfirmSuccess == false) {
+		reqFields +="\n- Email Confirm";
+		}
+		
+		if(firstNameSuccess == false) {
+		reqFields +="\n- First Name";
+		}
+	
+		if(lastNameSuccess == false) {
+		reqFields +="\n- Last Name";
+		}		
+		
+		if(passwordSuccess == false) {
+		reqFields +="\n- Password";
+		}		
+
+		if(passwordConfirmSuccess == false) {
+		reqFields +="\n- Password Confirm";
+		}	
+
+		if(zipSuccess == false) {
+		reqFields +="\n- Zipcode";
+		}		
+				
+		alert("The following required fields need attention:" + reqFields); 
+
+		  	var requiredFieldNeedsAttentionKMOne = newKissSl(kisssl);
+			requiredFieldNeedsAttentionKMOne.init({
+			    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+			    callback: function(){
+			        var globalVars = this.userDataObj;
+			        globalVars["Form Name"] = "Funnel Step One";
+			        globalVars["Field Name"] = reqFields;
+			        globalVars["Error"] = "The following required fields need attention:" + reqFields;
+			        if(console){
+			            console.log("Form error, globalVars: ", globalVars);
+			        };
+			        _kmq.push(['record', "Form Validation Error", globalVars]);
+			    }
+			});  
+		
+		}
+	 	}).hover(
+			function(){ jQuery(this).addClass("ui-state-hover"); },
+			function(){ jQuery(this).removeClass("ui-state-hover"); }
+			).mousedown(function(){ jQuery(this).addClass("ui-state-active"); })
+			.mouseup(function(){ jQuery(this).removeClass("ui-state-active"); });
+	});	
+
+
+
+	var myvars = true; /// ad form variables below TODO!
+	$('#stage2Submit').click(function() { 
+	var state = $('#STATE').val();
+	
+	$("#address1").blur();
+	$("#city").blur();	
+	$("#phone_no").blur();
+	
+	if(address1Success != false && citySuccess != false && phoneSuccess != false && state.length >0){
+		var company = $('#company').val();
+		var address1 = $('#address1').val();
+		var address2 = $('#address2').val();
+		var city = $('#city').val();
+		var state = $('#STATE').val();
+		var country = $('#COUNTRY').val();
+		var phone_no = $('#phone_no').val(); 
+		var submitZip = $('#zip_code2').val(); 
+
+		var URL2 = '/subscribe_vindicia/inc_step2_submit.cfm';	
+		$("#top_right_message").load(URL2 + '?company='+escape(company)+'&address1='+escape(address1)+'&address2='+escape(address2)+'&city='+escape(city)+'&state='+escape(state)+'&country='+escape(country)+'&phone_no='+escape(phone_no)+ '&zip_code=' + escape(submitZip), function() { 
+			$("#step2Message").fadeIn("slow");	
+		});	
+		$("#stage2").fadeOut("normal",function()  { 
+			$("#stage2").slideUp("slow",function()  { 
+				$("#stage3").fadeIn("slow");
+				funnelStep();
+				loadABContents(3);
+				trackView(3);
+				
+				$("#stepText").fadeTo(200,0.1,function() { 
+					$("#stepText").html('Step 3: Choose A Membership').fadeTo(900,1);
+				});			
+			});	
+		});	
+	}else{ 
+	
+	var reqFields = "";
+	if(address1Success == false) {
+	reqFields +="\n- Address 1";
+	}
+
+	if(citySuccess == false) {
+	reqFields +="\n- City";
+	}	
+
+	if(state.length < 1) {
+	reqFields +="\n- State/Province";
+	}		
+	
+	if(phoneSuccess == false) {
+	reqFields +="\n- Phone";
+	}		
+	
+	alert("The following required fields need attention:" + reqFields);  
+	  	var requiredFieldNeedsAttentionKMThree = newKissSl(kisssl);
+		requiredFieldNeedsAttentionKMThree.init({
+		    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+		    callback: function(){
+		        var globalVars = this.userDataObj;
+		        globalVars["Form Name"] = "Funnel Step Two";
+		        globalVars["Field Name"] = reqFields;
+		        globalVars["Error"] = "The following required fields need attention:" + reqFields;
+		        if(console){
+		            console.log("Form error, globalVars: ", globalVars);
+		        };
+		        _kmq.push(['record', "Form Validation Error", globalVars]);
+		    }
+		}); 
+	
+	}
+	});
+
+
+	$('#stage2SaveContinue').click(function() { 
+	var state = $('#STATE').val();
+	
+	$("#address1").blur();
+	$("#city").blur();	
+	$("#phone_no").blur();
+	
+	if(address1Success != false && citySuccess != false && phoneSuccess != false && state.length >0){
+		var company = $('#company').val();
+		var address1 = $('#address1').val();
+		var address2 = $('#address2').val();
+		var city = $('#city').val();
+		var state = $('#STATE').val();
+		var country = $('#COUNTRY').val();		
+		var phone_no = $('#phone_no').val(); 
+		var submitZip = $('#zip_code2').val(); 
+
+		
+		var URL2 = '/subscribe_vindicia/inc_step2_submit.cfm';	
+		$("#top_right_message").load(URL2 + '?company='+escape(company)+'&address1='+escape(address1)+'&address2='+escape(address2)+'&city='+escape(city)+'&state='+escape(state)+'&country='+escape(country)+'&phone_no='+escape(phone_no)+ '&zip_code=' + escape(submitZip), function() { 
+			$("#step2Message").fadeIn("slow");	
+		});	
+		$("#stage2").fadeOut("normal",function()  { 
+			$("#stage2").slideUp("slow",function()  { 
+				$("#stage4").fadeIn("slow");
+				loadABContents(4);
+				trackView(4);
+				
+				$("#stepText").fadeTo(200,0.1,function() { 
+					$("#stepText").html('Step 4: Complete Membership Transaction').fadeTo(900,1);
+				});			
+			});	
+		});	
+	}else{ 
+	
+	var reqFields = "";
+	if(address1Success == false) {
+	reqFields +="\n- Address 1";
+	}
+
+	if(citySuccess == false) {
+	reqFields +="\n- City";
+	}	
+
+	if(state.length < 1) {
+	reqFields +="\n- State/Province";
+	}		
+	
+	if(phoneSuccess == false) {
+	reqFields +="\n- Phone";
+	}		
+	
+	alert("The following required fields need attention:" + reqFields); 
+
+	  	var requiredFieldNeedsAttentionKM = newKissSl(kisssl);
+		requiredFieldNeedsAttentionKM.init({
+		    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+		    callback: function(){
+		        var globalVars = this.userDataObj;
+		        globalVars["Form Name"] = "Funnel Step Two";
+		        globalVars["Field Name"] = reqFields;
+		        globalVars["Error"] = "The following required fields need attention:" + reqFields;
+		        if(console){
+		            console.log("Form error, globalVars: ", globalVars);
+		        };
+		        _kmq.push(['record', "Form Validation Error", globalVars]);
+		    }
+		}); 
+	
+	}
+	});
+
+
+		
+		
+		
+	var packageSelected = true; 
+	$('#stage3Submit').click(function() { 
+	if( packageSelected != false ){
+		var URL3 = '/subscribe_vindicia/inc_step3_submit.cfm';	
+		var packageselection = $('input[name=package]:checked').val(); 
+		
+		//alert(packageselection);
+		$("#top_right_message").load(URL3 + '?subscription_id='+packageselection, function() { 
+			//preload pay details so they are seemless on next step
+			$("#step3Message").fadeIn("slow");	
+		});	
+		
+		$("#stage3").fadeOut("normal",function()  { 
+			$("#stage4").slideUp("slow",function()  { 
+				$("#stage4").fadeIn(1000);
+				funnelStep();
+				loadABContents(4);
+				trackView(4,packageselection);
+				//googleTrack(packageselection);
+
+				$("#stepText").fadeTo(200,0.1,function() { 
+					$("#stepText").html('Step 4: Complete Membership Transaction').fadeTo(900,1);
+				});			
+			});	
+		});	
+	}else{  
+		alert("Package Selection Error. Please select a package and try again");  
+	  	var packageSelectionErrorKM = newKissSl(kisssl);
+		packageSelectionErrorKM.init({
+		    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+		    callback: function(){
+		        var globalVars = this.userDataObj;
+		        globalVars["Form Name"] = "Funnel Step Three";
+		        globalVars["Field Name"] = "Package Selection";
+		        globalVars["Error"] = "Package Selection Error. Please select a package and try again";
+		        if(console){
+		            console.log("Form error, globalVars: ", globalVars);
+		        };
+		        _kmq.push(['record', "Form Validation Error", globalVars]);
+		    }
+		});
+	}
+	});		
+	// set packages to default package selection
+
+	
+	
+	
+	
+		
+	
+	
+		
+	
+	
+	
+	
+
+	
+
+		$('input[name="package"]')[0].checked = true;	
+		
+		
+		
+		$('#package1').addClass('selected');	
+
+		
+		loadPayDetailsHeader('52');
+		loadPayDetailsFooter('52');		
+		
+			
+		
+	
+	
+	
+	$("#package1").mouseover(function(){
+		$(this).addClass('hover');
+	}).mouseout(function(){
+      $(this).removeClass('hover');
+    });
+	
+
+	
+
+	
+	
+		
+	
+	
+	
+	
+
+	
+
+		$('input[name="package"]')[1].checked = false;	
+		
+			
+		
+	
+	
+	
+	$("#package2").mouseover(function(){
+		$(this).addClass('hover');
+	}).mouseout(function(){
+      $(this).removeClass('hover');
+    });
+	
+
+	
+
+	
+	
+	
+	
+	$('.packages').click( function(){
+
+		$('li.selected').removeClass('selected');
+		//$(this).addClass('selected').children("input[@type=radio]").click();
+
+		
+		$(this).addClass('selected');
+		
+		
+		var thisOne = $(this).attr('id');
+		var theLoopValFromPkg = thisOne.replace('package','');
+		theLoopVal = parseInt(theLoopValFromPkg);
+		theLoopVal = theLoopVal - 1;
+		$('input[name="package"]')[theLoopVal].checked = true;
+		//var packageValue1 = $('input[name="package"]')[theLoopVal].val();
+
+		
+		//todo check if SL and BW work same as FS
+		var packageValue = $(this).children("input[@type=radio]").val();
+		
+
+		loadPayDetailsHeader(packageValue);
+		loadPayDetailsFooter(packageValue);		
+	
+		
+	});
+
+
+
+
+	
+	
+	$("#cvv").focus(function() {
+		$("#cvvMessageBox").empty();
+	});
+
+	$("#cvv").blur(function() {
+
+		if(validateCVVCode() == false && $("#cvv").val() != "") {
+		$("#cvvMessageBox").fadeTo(200,0.1,function()  { 
+		$("#cvvMessageBox").html('<span class="messageboxerror">Valid CVV value Required!</span>').fadeTo(900,1);
+			  	var validCVVrequiredTwoKM = newKissSl(kisssl);
+				validCVVrequiredTwoKM.init({
+				    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+				    callback: function(){
+				        var globalVars = this.userDataObj;
+				        globalVars["Form Name"] = "Funnel Step Four";
+				        globalVars["Field Name"] = "CVV";
+				        globalVars["Error"] = "Valid CVV value Required!";
+				        if(console){
+				            console.log("Form error, globalVars: ", globalVars);
+				        };
+				        _kmq.push(['record', "Form Validation Error", globalVars]);
+				    }
+				});
+		});
+		}
+		
+		else if ($("#cvv").val() != "") {
+		$("#cvvMessageBox").fadeTo(200,0.1,function()  { 
+		$("#cvvMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeTo(900,1);
+		});		
+		}
+
+	});	
+
+	if(document.getElementById("cc").value.indexOf('x') == -1) {
+	// Clear Final Step information for safety
+	document.getElementById("cc").value = ''; 
+	document.getElementById("month").value = '0';
+	document.getElementById("year").value = '0';
+	}
+	
+	
+	//document.getElementById("birthYear").value = '0';
+	//$('input[name="gender"]')[0].checked = false;
+	//$('input[name="gender"]')[1].checked = false;
+		
+	ccSuccess = false;
+	$('#stage4Submit').click(function() { 
+
+		if(btState=="false") {
+		// do not go again..
+		}
+		else {
+	
+			buttonStateVal('false');
+
+			
+			var cvvValid = validateCVVCode();
+			
+	
+			var ccNumber = $('#cc').val();	
+			var cvv = $('#cvv').val();		
+			var ccMonth = $('#month').val();
+			var ccYear = $('#year').val();	
+			var ccType = $('#cc_type').val();
+			var cardNum = $('#ccNum').val();
+			var ccBirthYear = $('#birthYear').val();
+			var userGender = $('input[name="gender"]:checked').val() 
+			var ischecked = $('input[name="toc"]').is(':checked');
+			var over13 = $('input[name="over13"]').is(':checked');
+			
+			var sub_renewal_id = 0;
+			
+			var subscription = $('input[name=package]:checked').val()
+			
+			if( ccNumber != 0 && ccMonth != 0 && ccYear != 0 && ccBirthYear!= "0" && (userGender == "M" || userGender == "F") && cvvValid != false ){		
+				if(ischecked != false && over13 != false){ 
+				
+				//reset processCompleted variable each time
+				
+				processCompleted = false;
+				countdownSecs = 0;
+				
+				//immediately disable the button to avoid duplicate clicking...
+				$('#stage4Submit').attr("disabled",true);		
+				document.getElementById('stage4Back').style.display = "none";
+				
+				
+				$('#subFormElements').html('<div style="padding-top:100px;padding-left:40px;"><b>Processing your transaction</b> <img id="loader" src="/scripts/ajax-loader.gif" width="18px" height="18px"><br /><br />Please allow at least 120 seconds for this transaction to complete.</div>');
+	
+					$("#stage4").fadeOut("normal",function()  { 
+						$("#stage4").slideUp("slow",function()  { 
+							$("#stage5").fadeIn("slow");
+							funnelStep();
+							loadABContents(5);
+							$("#stepText").fadeTo(200,0.1,function() { 
+								$("#stepText").html('Activating your membership').fadeTo(900,1);
+							});								
+						
+						});	
+					});				
+	
+	
+				setTimeout("handleFailedProcess()",122000);
+				processCountDown();
+	
+				$.ajax({
+				type: "POST",
+				timeout: 120000,
+				url: "/subscribe_vindicia/send_cc_data.cfm",
+				data: "sub_renewal_id=" + escape(sub_renewal_id) + "&cardNum=" + escape(cardNum) + "&ccNo=" + escape(ccNumber) + "&ccMonth=" + escape(ccMonth) + "&ccYear=" + escape(ccYear) + "&ccType=" + escape(ccType) + "&ccBirthYear=" + escape(ccBirthYear) + "&gender=" + escape(userGender) + "&subscription=" + escape(subscription) + "&cvv=" + escape(cvv),
+				success: function(msg){
+					processCompleted = true;
+					$('#subFormElements').html(msg);
+				}
+				});			
+				
+				}else{ 
+						if(over13 == false) {
+						alert('You must be over 13 years old');
+					  	var ofAgeKM = newKissSl(kisssl);
+						ofAgeKM.init({
+						    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+						    callback: function(){
+						        var globalVars = this.userDataObj;
+						        globalVars["Form Name"] = "Funnel Step Four";
+						        globalVars["Field Name"] = "age";
+						        globalVars["Error"] = "You must be over 13 years old";
+						        if(console){
+						            console.log("Form error, globalVars: ", globalVars);
+						        };
+						        _kmq.push(['record', "Form Validation Error", globalVars]);
+						    }
+						});
+						$("#over13MessageBox").fadeTo(200,0.1,function()  { 
+						$("#over13MessageBox").html('<span class="messageboxerror">You must be over 13 years old</span>').fadeTo(900,1);
+						});	
+						}
+						
+						if(ischecked == false) {
+						alert('You must agree to the terms and conditions');
+					  	var acceptTermsKM = newKissSl(kisssl);
+						acceptTermsKM.init({
+						    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+						    callback: function(){
+						        var globalVars = this.userDataObj;
+						        globalVars["Form Name"] = "Funnel Step Four";
+						        globalVars["Field Name"] = "terms";
+						        globalVars["Error"] = "You must accept the terms and conditions";
+						        if(console){
+						            console.log("Form error, globalVars: ", globalVars);
+						        };
+						        _kmq.push(['record', "Form Validation Error", globalVars]);
+						    }
+						});
+						$("#tocMessageBox").fadeTo(200,0.1,function()  { 
+						$("#tocMessageBox").html('<span class="messageboxerror">You must accept the terms and conditions</span>').fadeTo(900,1);
+						});	
+						}
+				}
+			}else{
+				if(ccBirthYear != 0 &&  userGender != 0 && ccMonth != 0 && ccYear != 0 && cvvValid != false){	
+	
+				}else{
+					
+					if(ccNumber != 0 || ccNumber == "") {
+							//$("#ccMessageBox").fadeTo(200,0.1,function()  { 
+							//$("#ccMessageBox").html('<span class="messageboxerror">A Credit Card is Required!</span>').fadeTo(900,1);
+							//});						
+					}else{	
+							$("#ccMessageBox").fadeTo(200,0.1,function()  { 
+							$("#ccMessageBox").html('<span class="messageboxerror">A valid Credit Card is Required!</span>').fadeTo(900,1);
+							  	var validCCRequiredKM = newKissSl(kisssl);
+								validCCRequiredKM.init({
+								    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+								    callback: function(){
+								        var globalVars = this.userDataObj;
+								        globalVars["Form Name"] = "Funnel Step Four";
+								        globalVars["Field Name"] = "Credit Card";
+								        globalVars["Error"] = "A valid Credit Card is Required!";
+								        if(console){
+								            console.log("Form error, globalVars: ", globalVars);
+								        };
+								        _kmq.push(['record', "Form Validation Error", globalVars]);
+								    }
+								});
+							});	
+					}
+						
+					if(cvvValid != false) {
+							//$("#ccMessageBox").fadeTo(200,0.1,function()  { 
+							//$("#ccMessageBox").html('<span class="messageboxerror">A Credit Card is Required!</span>').fadeTo(900,1);
+							//});						
+					}else{	
+							$("#cvvMessageBox").fadeTo(200,0.1,function()  { 
+							$("#cvvMessageBox").html('<span class="messageboxerror">Valid CVV value Required!</span>').fadeTo(900,1);
+							  	var validCVVRequiredKM = newKissSl(kisssl);
+								validCVVRequiredKM.init({
+								    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+								    callback: function(){
+								        var globalVars = this.userDataObj;
+								        globalVars["Form Name"] = "Funnel Step Four";
+								        globalVars["Field Name"] = "CVV";
+								        globalVars["Error"] = "Valid CVV value Required!";
+								        if(console){
+								            console.log("Form error, globalVars: ", globalVars);
+								        };
+								        _kmq.push(['record', "Form Validation Error", globalVars]);
+								    }
+								});
+							});	
+					}					
+						
+					if(userGender == "M" ||  userGender == "F"){
+							//alert("Your gender is blank");	
+							$("#genderMessageBox").fadeTo(200,0.1,function()  { 
+							$("#genderMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeTo(900,1);
+							});						
+					}else{ 
+							$("#genderMessageBox").fadeTo(200,0.1,function()  { 
+							$("#genderMessageBox").html('<span class="messageboxerror">Gender is required!</span>').fadeTo(900,1);
+							  	var genderRequiredKM = newKissSl(kisssl);
+								genderRequiredKM.init({
+								    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+								    callback: function(){
+								        var globalVars = this.userDataObj;
+								        globalVars["Form Name"] = "Funnel";
+								        globalVars["Field Name"] = "Gender";
+								        globalVars["Error"] = "Gender is required!";
+								        if(console){
+								            console.log("Form error, globalVars: ", globalVars);
+								        };
+								        _kmq.push(['record', "Form Validation Error", globalVars]);
+								    }
+								});
+							});		
+					}
+					
+					
+					if(ccBirthYear != "0"){
+							//alert("Your gender is blank");	
+							$("#birthYearMessageBox").fadeTo(200,0.1,function()  { 
+							$("#birthYearMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeTo(900,1);
+							});						
+					}else{ 
+							$("#birthYearMessageBox").fadeTo(200,0.1,function()  { 
+								$("#birthYearMessageBox").html('<span class="messageboxerror">Birth Year is required!</span>').fadeTo(900,1);
+							  	var birthYearRequiredKM = newKissSl(kisssl);
+								birthYearRequiredKM.init({
+								    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+								    callback: function(){
+								        var globalVars = this.userDataObj;
+								        globalVars["Form Name"] = "Funnel";
+								        globalVars["Field Name"] = "Birth Year";
+								        globalVars["Error"] = "Birth Year is required!";
+								        if(console){
+								            console.log("Form error, globalVars: ", globalVars);
+								        };
+								        _kmq.push(['record', "Form Validation Error", globalVars]);
+								    }
+								});
+							});		
+					}
+					
+
+
+					var ccExpCheck = function () {
+						var ccMonth = $('#month').val();
+						var ccYear = $('#year').val();
+						if(ccMonth != 0 && ccYear != 0){
+								$("#expMessageBox").fadeTo(200,0.1,function()  { 
+								$("#expMessageBox").html('<span class="messageboxok">&nbsp;</span>').fadeTo(900,1);
+								});						
+						}else{ 
+							  	var ccFormMonthOrYear = newKissSl(kisssl);
+								ccFormMonthOrYear.init({
+								    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+								    callback: function(){
+								        var globalVars = this.userDataObj;
+								        globalVars["Form Name"] = "Funnel Step 4";
+								        globalVars["Field Name"] = "Month & Year";
+								        globalVars["Error"] = "Select Expiration Month and Year!";
+								        if(console){
+								            console.log("Form error, globalVars: ", globalVars);
+								        };
+								        _kmq.push(['record', "Form Validation Error", globalVars]);
+								    }
+								});
+								$("#expMessageBox").fadeTo(200,0.1,function()  { 
+								$("#expMessageBox").html('<span class="messageboxerror">Select Expiration Month and Year!</span>').fadeTo(900,1);
+								});		
+						}
+
+					};
+
+					ccExpCheck();
+
+					$( "#month" ).change(function() {
+						ccExpCheck();
+					});	
+
+					$( "#year" ).change(function() {
+						ccExpCheck();
+					});		
+	
+				}
+			}	
+		}
+		//btState is true in above code, this closes else statement
+	});	
+
+
+
+	// remove message if someone reclicks on it
+	$("#cc").focus(function() {
+			$("#ccMessageBox").empty();
+	});
+	
+	// move away from email text box
+	$("#cc").blur(function()
+	{
+		var ccNumber = $("#cc").val();
+		var ccURL = '/subscribe_vindicia/cc.cfm?cc=';
+		if(ccNumber != 0)
+			{
+					$("#ccMessageBox").show();
+					$('#ccMessageBox').html('<img id="loader" src="/scripts/ajax-loader.gif" width="18px" heigh="18px">')
+					$("#ccMessageBox").load(ccURL + ccNumber, function() { 
+						$("#ccMessageBox").hide();
+						$("#ccMessageBox").fadeIn("slow");															  	
+					});
+				
+				
+			} else {
+			//alert("email is blank");
+			}	
+	});
+	
+});
+
+
+
+
+
+
+function isValidPhone2(phone) {
+ 		//var DescPattern = new RegExp(/^([0-9 _ \- \( \) ]+)$/);
+ 		 		var DescPattern = new RegExp(/^(1\s*[-\/\.]?)?(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*$/);	
+		return DescPattern.test(phone);
+};	
+
+function isValidPhone(phone) {
+///$("#phone_no").val();
+	var m_strOut = document.getElementById('phone_no').value;
+	m_strOut = m_strOut.replace(/[^0-9-. \( \)]/g, ''); 
+	document.getElementById('phone_no').value = m_strOut;
+
+	var m_strOutNumTest = m_strOut.replace(/[^0-9]/g, ''); 
+
+	if(m_strOutNumTest.length < 10) {
+	return false;
+	}
+
+	else {	
+	return true;
+	}
+
+};
+
+
+function isValidAlpha(alpha) {
+ 		var DescPattern = new RegExp(/^([a-z A-Z ]+)$/);
+ 		return DescPattern.test(alpha);
+};	
+
+
+function isValidEmailAddress(emailAddress) {
+ 		if(emailAddress == "") {
+ 		return false;
+ 		}
+ 		
+ 		else {
+ 		var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+ 		return pattern.test(emailAddress);
+		}
+}
+</script>
+
+
+
+
+<style type="text/css">
+
+/*html and body defaults for all brands */
+
+html, body {
+	margin:0;
+	padding:0;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11px;
+	color:rgb(0,0,0);
+}
+
+a:link, a:visited {
+	color:rgb(0,90,162);
+}
+
+a:hover, a:active {
+	color:rgb(0,90,162);
+}
+
+/* here we specify different background colors for each brand's funnel */
+
+#sl-body {
+	background-color:#F4F4F4;
+}
+
+#bw-body {
+	background:rgb(198,223,255);
+}
+
+#fs-body {
+	background-image:url('images/ftrack-bground.png');
+	background-color:rgb(212,212,212);
+}
+
+#sl-funnel-header {
+	width:990px;
+	background:rgb(0,0,51);
+	color:rgb(255,255,255);
+	font-size:11px;
+}
+
+#bw-funnel-header {
+	width:990px;
+	background:rgb(26,42,67);
+	color:rgb(255,255,255);
+	font-size:11px;
+}
+
+#fs-funnel-header {
+	width:990px;
+	background:rgb(0,0,52);
+	color:rgb(255,255,255);
+	font-size:11px;
+}
+
+/* these generic classes are the same for all brands */
+
+#wrapper {
+	margin:0px auto;
+	width:990px;
+}
+
+#content {
+	background-color:rgb(230,230,230);
+	margin-top:0px;
+	padding:12px;
+	}
+
+#funnel_marketing_container {
+	float:left;
+	background:rgb(255,255,255);
+	width:330px;
+	height:600px;
+	padding:12px;
+}
+
+.clear {
+	clear:both;
+}
+
+h1 {
+	font-size:18px;
+}
+
+/* button styles. using one button for all the brands. we can change this later if need be. */
+
+.funnel-button {
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font-weight:bold;
+	font: 11px/100% Verdana, Geneva, sans-serif;
+	padding: 7px 10px 7px 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	color: rgb(255,255,255);
+	border: solid 1px rgb(41,82,132);
+	background: rgb(41,82,132);
+	background: -webkit-gradient(linear, left top, left bottom, from(#295284), to(#010233));
+	background: -moz-linear-gradient(top,  #295284,  #010233);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#295284', endColorstr='#010233');
+	}
+
+.funnel-button:hover {
+	text-decoration: none;
+	background: rgb(51,102,153);
+	background: -webkit-gradient(linear, left top, left bottom, from(#336699), to(#336699));
+	background: -moz-linear-gradient(top,  #336699,  #336699);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#336699', endColorstr='#336699');
+	}
+
+.funnel-button:active {
+	position: relative;
+	top:1px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#336699), to(#336699));
+	background: -moz-linear-gradient(top,  #336699,  #336699);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#336699', endColorstr='#336699');
+	color:rgb(255,255,255);
+	}
+
+/* here's all the old inline styles from inc_inline_style and inc_inline_style_bw */
+
+input[type=text],input[type=password] {
+	width:150px;
+}
+
+select {
+	width:150px;
+	font-size:12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.messageboxok{
+	position:absolute;
+	width:auto;
+	margin-left:8px;
+	padding:3px;
+	font-weight:normal;
+	font-size:11px;
+	color:rgb(84,175,66);
+	background: url('/include/images/yes.png');
+	background-position:left;
+	background-repeat:no-repeat;
+	padding-left:20px;
+}
+
+.messageboxerror {
+	position:absolute;
+	width:auto;
+	margin-left:8px;
+	padding:3px;
+	font-weight:normal;
+	font-size:11px;
+	color:rgb(203,32,39);
+	background: url('/include/images/no.png');
+	background-position:left;
+	background-repeat:no-repeat;
+	padding-left:20px;
+}
+
+/* package selector */
+
+packages li {
+	color:rgb(0,0,0);
+	background-color:rgb(255,255,255);
+	list-style-type:none;
+	cursor:pointer
+}
+
+li.selected {
+	color: rgb(0,0,51);
+	background-color:rgb(136,187,238);
+	cursor:pointer
+}
+
+.hover {
+	color: rgb(0,0,51);
+	background-color:rgb(154,205,255);
+	cursor:pointer
+}
+
+.orderItem {
+	font-family: Verdana;
+	font-size:7pt;
+}
+
+.orderItemDesc {
+	float:left;
+	padding:2px 5px 0 5px;
+	width:430px;
+	font-size:7pt;
+	font-family:arial;
+	color:#FFCC00;
+	font-weight:bold;
+	letter-spacing:1px;
+}
+
+.orderItemPrice {
+	float:left;
+	padding:2px 5px 0 27px;
+	width:440px;
+	font-size:7pt;
+	font-family:arial;
+	color:rgb(255,255,255);
+}
+
+.orderConfirmBold {
+	font-family: arial;
+	font-size: 8pt;
+	font-weight:bold;
+	float:left;
+}
+
+.orderConfirmBoldWarning {
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight:bold;
+	float:left;
+	color: rgb(203,32,39);
+}
+
+.orderConfirm {
+	font-family: Verdana;
+	font-size: 7pt;
+	float:left;
+}
+
+.orderConfirmLabel {
+	font-family: Verdana;
+	font-size: 7pt;
+	font-weight:bold;
+	width:100px;
+	float:left;
+	padding: 0 10px;
+}
+
+.orderConfirmData {
+	font-family: Verdana;
+	font-size: 7pt;
+	width:450px;
+	float:left;
+	padding: 0 10px;
+}
+
+.orderConfirmHeaderTop {
+	font-family: Verdana;
+	font-size: 12pt;
+	font-weight:bold;
+	width:500px;
+	float:left;
+	color:rgb(50,90,162);
+}
+
+.orderConfirmHeader {
+	font-family: Verdana;
+	font-size: 10pt;
+	font-weight:bold;
+	width:215px;
+	float:left;
+	border-top: 1px solid rgb(80,125,170);
+	border-bottom: 1px solid rgb(80,125,170);
+	padding: 2px 0 2px 1px;
+	margin: 2px 0px;
+}
+
+.orderConfirmContainer {
+	width:550px;
+}
+
+.orderConfirmCMSHeader {
+	font-family: Verdana;
+	font-size: 10pt;
+	font-weight:bold;
+	width:500px;
+	float:left;
+	padding: 5px 0 5px 3px;
+	margin: 5px 0px;
+}
+
+.orderConfirmCMSFooter {
+	font-family: Verdana;
+	font-size: 10pt;
+	font-weight:bold;
+	width:500px;
+	float:left;
+	padding: 5px 0 5px 3px;
+	margin: 5px 0px;
+}
+
+
+.orderProcessBold {
+	font-family: Verdana;
+	font-size: 8pt;
+	font-weight:bold;
+	float:left;
+}
+
+.orderProcess {
+	font-family: Verdana;
+	font-size: 8pt;
+	float:left;
+}
+
+.orderProcessLabel {
+	font-family: Verdana;
+	font-size: 7pt;
+	font-weight:bold;
+	width:70px;
+	float:left;
+	padding: 0 3px;
+	overflow:hidden;
+}
+
+.orderProcessLabel2 {
+	font-family: Verdana;
+	font-size: 7pt;
+	width:180px;
+	float:left;
+	padding: 0 5px;
+}
+
+.orderProcessData {
+	font-family: Verdana;
+	font-size: 7pt;
+	width:140px;
+	float:left;
+	overflow:hidden;
+}
+
+.orderProcessHeader {
+	font-family: Verdana;
+	font-size: 9pt;
+	font-weight:bold;
+	width:215px;
+	float:left;
+	border-top: 1px solid rgb(80,125,170);
+	border-bottom: 1px solid rgb(80,125,170);
+	padding: 2px 0 2px 1px;
+	margin: 2px 0px;
+}
+
+.orderProcessContainer {
+	width:600px;
+}
+
+.orderBox {
+	font-family: Verdana;
+	font-size:7pt;
+	background:rgb(0,0,51);
+	padding: 5px 5px 5px 10px;
+	margin: 0px 20px 0px 0px;
+}
+
+
+.offerTextHeader1,.offerTextHeader2,.offerTextHeader3 {
+	font-family: Verdana;
+	font-size:7pt;
+}
+
+.offerTextFooter {
+	font-family: verdana;
+	font-size:7pt;
+}
+
+.signupInfo {
+	font-family: verdana;
+	font-size:7pt;
+	padding:6px 0 5px 5px;
+}
+
+.signupInfoBoldHeader {
+	font-family: verdana;
+	font-size:10pt;
+	font-weight:bold;
+	color:rgb(255,204,0);
+	padding:5px 0 5px 0px;
+}
+
+.signupInfoBold {
+	font-family: verdana;
+	font-size:8pt;
+	font-weight:bold;
+	padding:5px 0 5px 0px;
+}
+
+a.signupInfo {
+	font-size:8pt;
+}
+
+
+
+#ab_display_content a {
+	color:#325aa2;
+}
+
+
+#content_footer_div a {
+	color:#325aa2;
+}
+
+.errorMsg {
+	font-family: arial;
+	font-size:7pt;
+	background-color:rgb(0,0,51);
+	color: rgb(255,255,255);
+	border-style:solid;
+	border-color:rgb(255,153,0);
+	border-width: 2px;
+	padding:10px 10px 10px 10px;
+	margin: 10px 50px 30px 50px;
+	font-weight:bold;
+}
+
+.signupContentContainer {
+	padding-top:10px;
+	width:950px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+.headerOfPage {
+	width:100%;
+	font-family: arial;
+	font-size:7pt;
+	background-color:(0,0,51);
+	color: rgb(255,255,255);
+	border-style:solid;
+	border-color:rgb(255,153,0);
+	border-width: 2px;
+	border-top:0px;
+	border-left:0px;
+	border-right:0px;
+	padding:0px 10px 0px 10px;
+	margin: 0px 0px 20px 0px;
+	font-weight:bold;
+}
+
+.required-text {
+	font-family: Verdana;
+	font-size:7pt;
+	color: rgb(203,32,39);
+	width: 150px;
+	float: left;
+}
+
+.ui-dialog .ui-dialog-title{
+
+background-image:url("");
+background-repeat:
+no-repeat;
+color:#FFFFFF;
+float:left;
+font-family:Verdana,Arial,Helvetica,sa
+ns-serif;
+font-size:14px;
+font-weight:bold;
+height:44px;
+margin:0 0;
+padding-left:20px;
+padding-top:17px;
+
+}
+
+.ui-widget-header {
+	background-color: #173458;
+	background: #173458;
+}
+
+</style>
+
+
+
+<script type="text/javascript">
+var mobile_url = "https://www.surfline.com/sub_funnel?slintcid=LOGINslcmpname=LOGIN-MODALimages/surfline-funnel-logo2.gifmkt=login";
+
+mobilecheck = function() {
+var check = false;
+	(function(a,b){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+return check; 
+};
+
+if(mobilecheck()){
+
+window.location = mobile_url;
+
+}
+
+</script>
+
+
+<script type="text/javascript" src="/scripts/kisssl.js"></script>
+<script type="text/javascript" src="/scripts/jquery.cookie.js"></script>
+
+</head>
+
+
+<body id="sl-body">
+
+
+
+
+
+<div id="wrapper">
+
+
+
+<div id="sl-funnel-header">
+
+
+	<div>
+		
+			<img src="images/surfline-funnel-logo2.gif" align="left" />
+		
+
+        <span id="top_right_message" style="float:right; padding-top:38px; padding-right:10px;">
+
+        
+
+        Already a member? <a href="javascript:showLogin();" style="color:rgb(118,161,211);">Sign In Here</a>
+        
+        </span>
+
+    </div>
+
+    <div class="clear"></div>
+
+</div>
+
+
+<div id="stage0PageName" style="display:none;">B surfline-trials step 0</div>
+<div id="stage1PageName" style="display:none;">B surfline-trials step 1</div>
+<div id="stage2PageName" style="display:none;">B surfline-trials step 2</div>
+<div id="stage3PageName" style="display:none;">B surfline-trials step 3</div>
+<div id="stage4PageName" style="display:none;">B surfline-trials step 4</div>
+<div id="stage5PageName" style="display:none;">B surfline-trials step 5</div>
+<div id="stageErrorPageName" style="display:none;">B surfline-trials error</div>
+
+
+
+
+
+	
+
+		
+			
+		
+
+		
+
+		
+
+			
+
+			
+			
+			
+
+			
+
+		
+
+		
+		
+		
+
+		<div id="OmniDesc52" style="display:none;">Membership - Surfline Premium - Yearly (15 Days Free);Free Trial Annual;1;0.00</div>
+
+	
+
+		
+			
+		
+
+		
+
+		
+
+			
+
+			
+
+			
+			
+			
+
+		
+
+		
+		
+		
+
+		<div id="OmniDesc53" style="display:none;">Membership - Surfline Premium - Monthly (15 Days Free);Free Trial Monthly;1;0.00</div>
+
+	
+
+
+
+
+
+<div id="stage1ABContent" style="display:none;">
+<!-- Step 1 B -->
+<p style="padding:0;margin:0px auto 10px auto;font-size:15px;text-align:center;">Start your <strong>15 DAY FREE TRIAL</strong> now.</p>
+<p style="font-size:10px;text-align:center;">After 15 day trial, you'll pay <strong>$69.99</strong> for a yearly membership,<br/>or <strong>$12.99</strong> for a monthly membership.</p>
+<p style="padding:0;margin:1px auto 2px auto;text-align:center;font-size:12px;"><strong>Here's what you'll get and more:</strong></p><table width="315" align="center" cellpadding="0" cellspacing="0"><tr><td width="142" align="center" valign="top"><img style="margin:10px 0 5px 0;" src="/subscribe_vindicia/funnel_pic_hbpiercam.jpg" alt="Sample Surfline HD Surf Cam" border="0" /><br />
+<span style="font-size:10px;">Ad-free HD Surf Cams</span>
+</td>
+<td width="30">
+</td>
+            <td width="143" align="center" valign="top">
+            	<img style="margin:10px 0 5px 0;" src="/subscribe_vindicia/funnel_pic_hdmobile.png" alt="Unlimited HD Cam Streams on Your Phone" border="0" /><br />
+                <span style="font-size:10px;">Unlimited HD Cam Streams on Your Phone</span>
+            </td></tr>
+<tr><td colspan="3" valign="top" align="center"><img src="/subscribe_vindicia/funnel_5day_forecast.png" border="0" style="margin:13px 0 5px 0;"><br /><span style="font-size:10px;">Written forecasts from Surfline's expert team</span></td></tr><tr><td colspan="3" align="center" valign="top"><img style="margin:13px 0 5px 0;" src="/subscribe_vindicia/funnel_advanced_tools.jpg" alt="Advanced forecasting tools" border="0" /><br /><span style="font-size:10px;">Long-range regional and spot forecast tools</span></td></tr>
+   <tr>
+         	<td align="center" valign="top">
+            	<img style="margin:15px 0 5px 0;" src="/subscribe_vindicia/funnel_surf_alert.png" alt="Surf Alerts" border="0" /><br />
+                <span style="font-size:10px;">Set custom alerts for your favorite breaks</span>
+             </td>
+             <td>
+             	<!-- -->
+             </td>
+             <td align="center" valign="top">
+             	<img style="margin:15px 0 5px 0;" src="/subscribe_vindicia/funnel_surfgear_discounts.png" alt="Discounts on gear and travel" border="0" /><br />
+                <span style="font-size:10px;">Discounts on gear, local shops, and travel</span>
+             </td>
+          </tr>
+
+</table>
+<!-- Step 1 B -->
+</div>
+
+<div id="stage2ABContent" style="display:none;">
+<!-- Dusty Payne -->
+<div align="center">
+<p style="text-align:center;font-size:14px;margin:0;">What people are saying about <strong>Surfline</strong></p>
+<img src="/subscribe_vindicia/funnel_dusty_portrait_2.jpg" alt="Dusty Payne" border="0" style="margin:10px 0 0 0;" />
+    <div style="font-size:13px;line-height:19px;width:260px;text-align:left;padding:0;margin:15px auto 15px auto;">
+<strong>"Surfline's a real good resource for the surfers who like to stay up to date with everything going on in the industry. It's also an awesome premium swell forecasting website. It's everything a surfer needs."</strong>
+<br />
+&mdash; <em>Dusty Payne</em>
+</div>
+<img src="/subscribe_vindicia/funnel_dusty_surf2.jpg" border="0"  alt="Dusty Payne surfing" />
+</div>
+
+<!-- Dusty Payne -->
+</div>
+
+<div id="stage3ABContent" style="display:none;">
+<!-- Rob Machado -->
+<div align="center">
+
+    <div style="font-size:20px;width:300px;text-align:left;padding-bottom:25px">
+    "Surfline is the best premium surf forecasting website. It's my go-to site to see what the waves are doing."
+    <br /><br />
+    <span style="font-size:10pt">- <em>Rob Machado</em></span>
+    </div>
+    
+    <img src="/marketing/funnel/machado_headshot.jpg" alt="Rob Machado wants you to be a Premium Subscriber" border="0">
+
+</div>
+<!-- Rob Machado -->
+</div>
+
+<div id="stage4ABContent" style="display:none;">
+<!-- Step 4 B -->
+<div align="center">
+
+    <div style="font-size:15px;padding-bottom:15px"><strong>One step away from skipping ads and seeing your spot in HD longer.</strong></div>
+    
+    <img src="/marketing/funnel/hd_cam_image.jpg" alt="Ad free HD Surf Cams" border="0" />
+    
+    <div style="font-size:12px;padding-top:10px"><em>View of Huntington Beach Premium HD surf cam</em><br /></div>
+
+</div>
+<!-- Step 4 B -->
+</div>
+
+<div id="stage5ABContent" style="display:none;">
+<!-- Joel Parkinson -->
+<div align="center">
+<img src="/subscribe_vindicia/funnel_parko_portrait.jpg" border="0" alt="Joel Parkinson" />
+
+    <div style="font-size:14px;width:265px;text-align:left;padding:10px 0 10px 0;"><strong>"Wherever I am in the world, I always log on to Surfline for the latest news and views on our sport. The blogs keep me entertained for hours and the information is always right on the money."</strong><br />&mdash;<em> Joel Parkinson</em>
+    </div>
+<img src="/subscribe_vindicia/funnel_parko_surf.jpg" alt="Parko surfing" border="0" />
+    
+   
+</div>
+<!-- Joel Parkinson -->
+</div>
+
+<div id="failedProcessMessage" style="display:none;">
+	<strong>Your transaction has timed out.</strong>
+	<br />
+	<br />
+		Credit card processing has taken longer than 30 seconds. This means 1 of 2 things:
+	<br />
+	<ol>
+	<li>Your card was not charged and you are not a premium subscriber yet</li>
+	<li>Your card was charged and you have an active premium account now</li>
+	</ol>
+	<br />
+		If you were successfully charged and have an active premium account, the link below will take you to My Account.
+		If you were not charged and need to try again the link below will refresh the page for another try.
+	<br />
+	<br />
+
+	
+	
+	
+	
+	
+
+	<a href="/subscribe_vindicia/index.cfm?verify=true&mkt=login&slintcid=LOGIN&slcmpname=LOGIN-MODALimages/surfline-funnel-logo2.gif">Click now to see</a>.
+	<br />
+	<br />
+	You may contact Surfline customer support to verify any issues at 1 (800) 229-7873.
+	<br />
+</div>
+
+<div id="content">
+
+<input type="hidden" name="package_id" id="package_id" value="19">
+
+<div style="height:550px;margin-bottom:20px"> 
+
+
+    <div id="funnel_marketing_container">
+
+			<div id="ab_display_content">
+    		
+			<!-- Step 1 B -->
+<p style="padding:0;margin:0px auto 10px auto;font-size:15px;text-align:center;">Start your <strong>15 DAY FREE TRIAL</strong> now.</p>
+<p style="font-size:10px;text-align:center;">After 15 day trial, you'll pay <strong>$69.99</strong> for a yearly membership,<br/>or <strong>$12.99</strong> for a monthly membership.</p>
+<p style="padding:0;margin:1px auto 2px auto;text-align:center;font-size:12px;"><strong>Here's what you'll get and more:</strong></p><table width="315" align="center" cellpadding="0" cellspacing="0"><tr><td width="142" align="center" valign="top"><img style="margin:10px 0 5px 0;" src="/subscribe_vindicia/funnel_pic_hbpiercam.jpg" alt="Sample Surfline HD Surf Cam" border="0" /><br />
+<span style="font-size:10px;">Ad-free HD Surf Cams</span>
+</td>
+<td width="30">
+</td>
+            <td width="143" align="center" valign="top">
+            	<img style="margin:10px 0 5px 0;" src="/subscribe_vindicia/funnel_pic_hdmobile.png" alt="Unlimited HD Cam Streams on Your Phone" border="0" /><br />
+                <span style="font-size:10px;">Unlimited HD Cam Streams on Your Phone</span>
+            </td></tr>
+<tr><td colspan="3" valign="top" align="center"><img src="/subscribe_vindicia/funnel_5day_forecast.png" border="0" style="margin:13px 0 5px 0;"><br /><span style="font-size:10px;">Written forecasts from Surfline's expert team</span></td></tr><tr><td colspan="3" align="center" valign="top"><img style="margin:13px 0 5px 0;" src="/subscribe_vindicia/funnel_advanced_tools.jpg" alt="Advanced forecasting tools" border="0" /><br /><span style="font-size:10px;">Long-range regional and spot forecast tools</span></td></tr>
+   <tr>
+         	<td align="center" valign="top">
+            	<img style="margin:15px 0 5px 0;" src="/subscribe_vindicia/funnel_surf_alert.png" alt="Surf Alerts" border="0" /><br />
+                <span style="font-size:10px;">Set custom alerts for your favorite breaks</span>
+             </td>
+             <td>
+             	<!-- -->
+             </td>
+             <td align="center" valign="top">
+             	<img style="margin:15px 0 5px 0;" src="/subscribe_vindicia/funnel_surfgear_discounts.png" alt="Discounts on gear and travel" border="0" /><br />
+                <span style="font-size:10px;">Discounts on gear, local shops, and travel</span>
+             </td>
+          </tr>
+
+</table>
+<!-- Step 1 B -->
+    		
+			</div>
+
+	
+            <div id="step2Message" style=""></div><BR />
+            <div id="step3Message" style=""></div><BR />
+            <div id="step4Message" style=""></div><BR />
+
+
+		<div id="content_footer_div" style="text-align:center;">
+			<span style="font-size:11px;text-align:center;">Questions? Need Help? Email <a href="mailto:support@surfline.com">support@surfline.com</a></span>
+		</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div  style="text-align:center;float:right;width:576px;height:600px;background:rgb(255,255,255);padding:12px;">
+
+		<h1>
+			    <span id="stepText">
+				    
+				    Step 1: Create Your Membership
+				    
+			    </span>
+		</h1>
+
+
+<div style="background-color:rgb(255,255,255);">
+
+	<div style="padding:5px 10px 5px 10px; color:rgb(0,0,0);">
+
+		
+		
+
+		
+
+		<div id="stageValidateTestUser" style="height:270px;display:none;">
+
+		                <script language="javascript">
+				function validateTestUser() {
+				var username_test_user = $('#username_test_user').val();
+				var password_test_user = $('#password_test_user').val();
+
+				$('#testUserCaption').html('Validating test user information...');
+
+					 $.ajax({
+					   type: "GET",
+					   url: "/subscribe_vindicia/include/inc_validate_test_user.cfm",
+					   data: "username_test_user=" + username_test_user + "&password_test_user=" + password_test_user,
+					   success: function(msg) {
+						 $('#testUserCaption').html(msg);
+
+					   	if(msg.indexOf('valid') > 0) {
+							setTimeout("hideTestUser()",2500);
+					   	}
+
+					   }
+					 });
+
+				 }
+		                </script>
+
+				
+
+		        <table width="580" style="color:rgb(0,0,0);margin-top:50px">
+					<caption id="testUserCaption"></caption>
+						
+						
+						
+
+		                    <form method="post" name="testUserForm" action="/myaccount/login_handler.cfm">
+		                    <input type="hidden" name="destinationURL" value="/subscribe_vindicia/index.cfm">
+
+		                    <tr >
+		                    	<td width="360" height="30" align="right" valign="top" >* username:
+			                    <input name="username_test_user" type="text" id="username_test_user" value="" maxlength="400" size="25" /> </td>
+			                    <td width="208" align="left" valign="top"><span id="usernameTestUserMessageBox" style=" float:left"></span> </td>
+		                    </tr>
+		                    <tr>
+			                    <td width="360" height="30" align="right" valign="top" >* Password:
+			                    <input name="password_test_user" type="password" id="password_test_user" value="" maxlength="400" size="25" /> </td>
+			                    <td align="left" valign="top"><span id="passwordTestUserMessageBox" style=" float:left"></span> </td>
+		                    </tr>
+					</form>
+		                    <tr>
+		                    	<td colspan=2 align="center">
+		                    	<button id="hideTestUser" style="display: inline-block;*display: inline;vertical-align: baseline;margin: 0 2px;outline: none;cursor: pointer;text-align: center;	text-decoration: none;font-weight:bold;font: 11px/100% Verdana, Geneva, sans-serif;padding: 7px 10px 7px 10px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2);color:rgb(35,35,35);border:solid 1px rgb(150,150,150);background:rgb(230,230,230);" onClick="hideTestUser();">Cancel</button>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		                    	<button id="submitTestUser" class="funnel-button" onClick="validateTestUser();">Validate Test User</button>
+		                    	</td>
+		                    </tr>
+				</table>
+		</div>
+
+
+		
+		
+
+		<div id="stageLogin" style="height:270px;display:none;">
+
+			<script language="javascript">
+				function submitLogin2() {
+					if(document.loginForm.username.value != "" && document.loginForm.password.value != "") {
+					document.loginForm.submit();
+					}
+				}
+				function submitLogin() {
+				var username = $('#email_login').val();
+				var password = $('#password_login').val();
+				if(username.length > 0 && password.length > 0) {
+
+					$('#loginCaption').html('<img id="loader" src="/scripts/ajax-loader.gif" width="18px" height="18px"> Sending login information...<br /><br />')
+
+						 $.ajax({
+						   type: "POST",
+						   url: "/subscribe_vindicia/login_handler.cfm",
+						   data: "username=" + escape(username) + "&password=" + escape(password) + "&co=sl",
+						   success: function(msg){
+							if( msg.indexOf("true") >= 0 ) {
+
+							$('#loginCaption').html('Login successful.  Refreshing...<br /><br />');
+
+							document.location.href = "/subscribe_vindicia/index.cfm?mkt=login&slintcid=LOGIN&slcmpname=LOGIN-MODALimages/surfline-funnel-logo2.gif";
+							}
+							else {
+						  	var funnelConvertToLoginFail = newKissSl(kisssl);
+							funnelConvertToLoginFail.init({
+							    "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+							    callback: function(){
+							        var globalVars = this.userDataObj;
+							        globalVars["Form Name"] = "Funnel Convert To Login";
+							        globalVars["Field Name"] = "Email or Password";
+							        globalVars['Error'] = "Login failed; Invalid email address or password";
+							        if(console){
+							            console.log("Form error, globalVars: ", globalVars);
+							        };
+							        _kmq.push(['record', "Login incorrect email address or password", globalVars]);
+							    }
+							});
+							$('#loginCaption').html('Login failed.  Please try again.<br /><br />');
+							$('#password_login').val('');
+							$('#password_login').focus();
+							}
+						   }
+						 });
+					}
+				 }
+			</script>
+
+		<table width="580" style="color:rgb(0,0,0); margin-top:50px">
+					<caption id="loginCaption"></caption>
+                    <form method="post" name="loginForm" action="/myaccount/login_handler.cfm">
+                    <input type="hidden" name="destinationURL" value="/subscribe_vindicia/index.cfm">
+
+                    <tr >
+                    <td width="360" height="30" align="right" valign="top" >* Email Address:
+                    <input name="username" type="text" id="email_login" value="" maxlength="400" size="25" /> </td>
+                    <td width="208" align="left" valign="top"><span id="emailLoginMessageBox" style=" float:left"></span> </td>
+                    </tr>
+                    <tr>
+                    <td width="360" height="30" align="right" valign="top" >* Password:
+                    <input name="password" type="password" id="password_login" value="" maxlength="400" size="25" />
+
+                    <br /><a href="http://www.surfline.com/myaccount/?action=forgot_password" target="_blank" style="font-size:8pt;padding:10px 25px 10px 0;margin-bottom:10px;">Forgot Your Password?</a>
+                    <br />
+
+                	</td>
+
+                    <td align="left" valign="top"><span id="passwordLoginMessageBox" style=" float:left"></span>
+                     </td>
+                    </tr>
+			</form>
+					<tr>
+							<td colspan="4" height="10">&nbsp;</td>
+					</tr>
+                    <tr>
+                    	<td colspan=2 align="center">
+                    	<button id="hideLogin" onClick="hideLogin();" style="display: inline-block;*display: inline;vertical-align: baseline;margin: 0 2px;outline: none;cursor: pointer;text-align: center;	text-decoration: none;font-weight:bold;font: 11px/100% Verdana, Geneva, sans-serif;padding: 7px 10px 7px 10px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2);color:rgb(35,35,35);border:solid 1px rgb(150,150,150);background:rgb(230,230,230);">Cancel</button>
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    	<button id="loginNow" class="funnel-button" onClick="submitLogin();">Login Now</button>
+                    	
+                    	</td>
+                    </tr>
+		</table>
+
+		</div>
+
+
+<div id="stage1" style="height:270px;">
+
+		<div id="stage1Content">
+			
+
+
+
+
+<!--cookie.fID:0 / sub_status:  -->
+
+
+
+
+	<table width="580" style="color:#000; margin-top:50px" border="0">
+	<tr >
+	<td width="360" height="5" align="right" valign="top" >
+	<div style="color:#666; font-size:10px; padding-right:70px;padding-bottom:10px;">* Required fields</span>
+	</td>
+	<td width="208" align="left" valign="top">&nbsp; </td>
+	</tr>
+
+	<tr >
+	<td width="360" height="30" align="right" valign="top" >* Email Address: <input name="email" type="text" id="email" value="" maxlength="100" size="25" /> </td>
+	<td width="208" align="left" valign="top"><span id="emailMessageBox" style=" float:left"></span></td>
+	</tr>
+	<tr>
+	<td width="360" height="30" align="right" valign="top"  >* Confirm Email Address: <input name="confirm_email" type="text" id="confirm_email" value="" maxlength="100" size="25"/> </td>
+	<td align="left" valign="top"><span id="emailConfirmMessageBox" style=" float:left"></span> </td>
+	</tr>
+	<tr>
+	<td width="360" height="30" align="right" valign="top" >* Create Password: <input name="password" type="password" id="password" value="" maxlength="30" size="25" /> </td>
+	<td align="left" valign="top"><span id="passwordMessageBox" style=" float:left"></span> </td>
+	</tr>
+	<tr>
+	<td width="360" height="30" align="right" valign="top" >* Confirm Password: <input name="confirm_pass" type="password" id="confirm_pass" value="" maxlength="30" size="25" /> </td>
+	<td align="left" valign="top"><span id="confirmPasswordMessageBox" style=" float:left"></span> </td>
+	</tr>
+
+	<tr>
+	<td width="360" height="30" align="right" valign="top" >* First Name: <input name="first_name" type="text" id="first_name" value="" maxlength="100" size="25" /> </td>
+	<td width="208" align="left" valign="top"><span id="firstNameMessageBox" style=" float:left"></span></td>
+	</tr>
+	<tr>
+	<td width="360" height="30" align="right" valign="top" >* Last Name: <input name="last_name" type="text" id="last_name" value="" maxlength="100" size="25" /> </td>
+	<td width="208" align="left" valign="top"><span id="lastNameMessageBox" style=" float:left"></span> </td>
+	</tr>					
+
+	<tr>
+	<td width="360" height="30" align="right" valign="top" >* Zipcode: <input name="zip_code" type="text" id="zip_code" value="" maxlength="20" size="25" edited /> </td>
+	<td align="left" valign="top"><span id="zipMessageBox" style=" float:left"></span> </td>
+	</tr>
+	</table>                    
+
+
+        </div>
+
+		<div align="center" style="width:100%; padding-top:18px;">
+			<button id="stage1Submit" class="funnel-button">Continue</button>
+		</div>
+
+		<div style="width:400px; font-size:9px; padding-left:180px; margin-top:12px;text-align:left;"><img src="lock_icon.png" title="You are Safe" align="left" style="padding-right:4px; padding-bottom:10px;" />You Are Safe - This is a secure server.<br />You Are Respected - We value your privacy.<BR /> We will not sell or rent your email address to third parties.</div>
+
+		<div align="center" style="font-size:9px; font-weight:bold; padding-top:60px"> 
+<a href="javascript:void(0);" onClick="jQuery('#dialog1').dialog('open'); return false">How It Works</a>  
+ | 
+<a href="javascript:void(0);" onClick="jQuery('#dialog2').dialog('open'); return false">Is It Worth It?</a>
+ </div>
+
+		<div class="clear"></div>
+
+                </div>
+
+	
+	<div id="stage2"  style="height:270px;display:none;">
+
+		
+
+		<table width="580" style="color:rgb(0,0,0); margin-top:20px" border="0">
+		<input name="company" type="hidden" id="company" value="" maxlength="400" />
+		<span id="companyMessageBox" style=" float:left;display:none;"></span>
+		
+		<tr>
+		<td width="320" height="30" align="right" valign="top" >* Address Line 1: <input name="address1" type="text" id="address1" value="" maxlength="35" /> </td>
+		<td align="left" valign="top" width="260"><span id="address1MessageBox" style=" float:left"><span style="font-size:8pt;">(max 35 chars)</span></span> </td>
+		</tr>
+		<tr>
+		<td width="320" height="30" align="right" valign="top" >Address Line 2: <input name="address2" type="text" id="address2" value="" maxlength="100" /> </td>
+		<td align="left" valign="top" width="260"><span id="address2MessageBox" style=" float:left"></span> </td>
+		</tr>
+
+		<tr>
+		<td width="320" height="30" align="right" valign="top" >* City: <input name="city" type="text" id="city" value="" maxlength="100" /> </td>
+		<td align="left" valign="top" width="260"><span id="cityMessageBox" style=" float:left"></span> </td>
+		</tr>
+
+		<tr>
+		<td width="320" height="30" align="right" valign="top" ><div style="float:left;padding-left:105px;">Zip Code:</div> <div id="zip_code_stage2" style="float:left;padding-left:5px;"></div> <div style="width:120px;float:left;">&nbsp;</div></td>
+		<td align="left" valign="top" width="260"><span>&nbsp;</span> </td>
+		</tr>
+
+		<script type="text/javascript" src="/include/country_state_select_funnel.js"></script>
+
+		
+		
+		  
+
+	
+
+	
+		  
+			
+			  
+			
+		  
+		
+
+
+		
+		
+
+		<td colspan="2" width="580" height="30" align="right" valign="top">
+		<div style="float:left;padding-left:100px;padding-right:3px;">* Country: </div>
+		<div style="float:left;padding-left:0px;margin-left:0px;width:153px;">
+		<div id="countryDiv" style="float:right;font-size:8pt;"></div>
+		</div>
+
+		<div id="countryMessageBox" style=" float:left"></div>
+
+		</td>
+
+
+		<tr>
+		<td colspan="2" width="580" height="30" align="right" valign="top" >
+		<div style="float:left;padding-left:55px;margin-left:8px;">
+		* State/Province:
+		</div>
+
+		<div style="float:left;padding-left:0px;margin-left:0px;width:153px;">
+		<div id="notes" style="font-size:8pt;"></div>
+		<div style="clear:both;"></div>
+		<div id="stateDiv" style="float:right;font-size:8pt;text-align:left;padding-left:5px;"></div>
+		</div>
+		
+
+		</td>
+		
+		</tr>
+
+		
+		<script language="javascript">
+			showCountries();
+			showStates('US');
+			selectState('');
+			selectCountry('US');
+			saveSelectedState();
+		</script>
+
+		<tr>
+		<td width="320" height="30" align="right" valign="top" >* Phone Number: <input name="phone_no" type="text" id="phone_no" value="" maxlength="400" /></td>
+		<td align="left" valign="top"><span id="phoneMessageBox" style=" float:left"></span> </td>
+		</tr>
+		<tr>
+			<td valign="top" colspan="2">
+
+	<div align="center" style="width:100%; padding-top:12px;">
+	<div>
+	<button id="stage1Back" style="margin-right:10px;display: inline-block;*display: inline;vertical-align: baseline;margin: 0 2px;outline: none;cursor: pointer;text-align: center;	text-decoration: none;font-weight:bold;font: 11px/100% Verdana, Geneva, sans-serif;padding: 7px 10px 7px 10px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2);color:rgb(35,35,35);border:solid 1px rgb(150,150,150);background:rgb(230,230,230);" >Back to Step 1</button>
+	<button id="stage2Submit" class="funnel-button" style="font-weight:bold;" >Continue</button>
+	<button id="stage2SaveContinue" class="funnel-button" style="font-weight:bold;display:none;" >Save and Continue</button>
+	</div>
+
+	<div style="width:400px; font-size:9px; padding-left:180px; margin-top:12px;text-align:left;">
+	<img src="lock_icon.png" title="You are Safe" align="left" style="padding-right:4px; padding-bottom:10px;text-align:left" />You Are Safe - This is a secure server.<BR />You Are Respected - We value your privacy.<BR /> We will not sell or rent your email address to third parties.
+	</div>
+
+	<div style="font-size:9px; font-weight:bold; padding-top:60px">
+	
+<a href="javascript:void(0);" onClick="jQuery('#dialog1').dialog('open'); return false">How It Works</a>  
+ | 
+<a href="javascript:void(0);" onClick="jQuery('#dialog2').dialog('open'); return false">Is It Worth It?</a>
+
+	</div>
+
+	</div>
+
+	</td>
+	</tr>
+	</table>
+
+
+	
+
+	</div> 
+
+	
+
+		
+		<div id="stage3"  style="height:270px; padding-top:7px; display:none;">
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td valign="top">
+			
+<div id="package_header_div" style="clear:both;width:100%;margin:auto;text-align:center;font-size:12pt;font-weight:bold;" align="center">
+We offer two membership plans:
+</div>
+
+		<div align="center">
+                    <ul>
+                    <table align="center">
+                    <tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <td valign="top">
+                    	<div align="center" style="font-size:14px; font-weight:bold; padding-bottom:2px;"><i>
+
+
+Best Savings
+
+
+</i></div>
+                        <li id="package1" class="packages" style="width:170px;height:300px;border: 1px #000 solid;  padding: 5px 7px 5px 7px; font-size:9px;list-style:none;">
+							<div style="min-height:210px;">
+                                <div align="center" style="width:100%;font-size:14px; font-weight:bold">
+
+Yearly Membership
+
+</div>
+                                <BR />
+                                
+
+<div style="padding:0px; width:160px;" align="center">
+<div style="font-size:12px;">
+<b>15 Days Free<br> 
+then $69.99/year</b>
+</div></div><br>
+
+
+<div style="padding:5px; width:160px;" align="left">
+
+<div style="font-size:10px;">
+<b>Includes:</b><br /></div>
+
+
+<div style="font-size:10px;">
+- $85.45 savings over Monthly<br>
+- HD cams with NO ads<br>
+- Long-range forecasts<br>
+- Custom Surf Alerts<br />
+- Best Bets<br>
+- And more<br />
+- Billed only once a year<br />
+</div></div>
+
+
+
+				</div>
+                <div style="clear:left;"></div>
+                <div style="padding:5px 5px 5px 5px;clear:both;vertical-align:bottom">
+                <input type="radio" id="subscription1" name="package" value="52" /><span align="center" style="width:100%;font-size:11px; font-weight:bold"> $0.00 (free 15 days)<BR></span>
+                </div>
+                            <div align="center" style="width:100%;font-size:9px; font-weight:normal;padding-bottom:10px;">
+
+<br>After 15 day trial, you'll be billed $69.99, and renewed annually.
+
+</div>
+                                                    <div style="clear:both;"></div>
+
+                        </li>
+                    </td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <td valign="top">
+                    	<div align="center" style="font-size:14px; font-weight:bold; padding-bottom:2px;"><i>
+
+
+Most Flexible
+
+
+</i></div>
+                        <li id="package2" class="packages" style="width:170px;height:300px;border: 1px #000 solid;  padding: 5px 7px 5px 7px; font-size:9px;list-style:none;">
+							<div style="min-height:210px;">
+                                <div align="center" style="width:100%;font-size:14px; font-weight:bold">
+
+Monthly Membership
+
+</div>
+                                <BR />
+                                
+
+<div style="padding:0px; width:160px;" align="center">
+<div style="font-size:12px;">
+<b>15 Days Free<br> 
+then $12.99/month</b>
+</div></div><br>
+
+
+<div style="padding:5px; width:160px;" align="left">
+
+<div style="font-size:10px;">
+<b>Includes:</b><br /></div>
+
+
+<div style="font-size:10px;">
+- HD cams with NO ads<br>
+- Long-range forecasts<br>
+- Custom Surf Alerts<br />
+- Best Bets<br>
+- And more<br />
+- Billed monthly<br />
+</div></div>
+
+
+
+				</div>
+                <div style="clear:left;"></div>
+                <div style="padding:5px 5px 5px 5px;clear:both;vertical-align:bottom">
+                <input type="radio" id="subscription2" name="package" value="53" /><span align="center" style="width:100%;font-size:11px; font-weight:bold"> $0.00 (free 15 days)<BR></span>
+                </div>
+                            <div align="center" style="width:100%;font-size:9px; font-weight:normal;padding-bottom:10px;">
+
+<br>After 15 day trial, you'll be billed $12.99, and renewed monthly.
+
+</div>
+                                                    <div style="clear:both;"></div>
+
+                        </li>
+                    </td>
+
+
+
+
+
+                    </tr>
+                    </table>
+                    </ul>
+            </div>
+
+
+			<div style="clear:both;margin-bottom:20px;"></div>
+
+			<div align="center" style="width:100%; margin-top:12px;">
+			<button id="stage2Back" style="display: inline-block;*display: inline;vertical-align: baseline;margin: 0 2px;outline: none;cursor: pointer;text-align: center;	text-decoration: none;font-weight:bold;font: 11px/100% Verdana, Geneva, sans-serif;padding: 7px 10px 7px 10px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2);color:rgb(35,35,35);border:solid 1px rgb(150,150,150);background:rgb(230,230,230);">Back to Step 2</button> &nbsp; &nbsp;
+			<button id="stage3Submit" class="funnel-button" style="font-weight:bold;" >Continue</button>
+			</div>
+
+			
+			
+			<div style="font-size:9px;margin-top:14px;margin-left:20px; font-weight:bold;text-align:center;"> <a href="continue_reg.cfm">No Thanks, Continue to Surfline as a Registered Visitor</a></div>
+			
+
+			<div style="width:400px; font-size:9px; padding-left:180px; margin-top:12px;text-align:left"><img src="lock_icon.png" title="You are Safe" align="left" style="padding-right:4px; padding-bottom:10px;" />You Are Safe - This is a secure server.<BR />You Are Respected - We value your privacy.<BR /> We will not sell or rent your email address to third parties.</div>
+			</td>
+		</tr>
+		</table>
+		</div>
+
+		
+
+
+
+
+
+
+
+        <div id="stage4"  style="height:270px; display:none">
+        	<div align="center" style="font-size:15px; font-weight:bold; padding-bottom:6px; padding-top:4px;">Your Payment Information</div>
+			<div style="clear:both;">&nbsp;</div>
+			<div id="paymentHeaderDetails">
+
+<div align="center" style="font-size:11px;"><strong>Your Membership </strong>-  Surfline Premium - Yearly (15 Days Free) - $0.00  <br /></div>
+<div align="center" style="font-size:10px;">
+
+(You will not be billed until your free trial ends)
+<BR />
+
+
+
+HD cams with No ads, Up to 17 Day Surf Forecasts, Custom Surf Alerts,<BR /> Surf Shop Discounts, Surf Travel Discounts
+
+
+</div>
+
+</div>
+			<div style="clear:both;">&nbsp;</div>
+
+            <div align="center" style="padding-top:9px"> <img src="cards.png" width="120px" height="24px" /></div>
+
+			<table width="580" style="color:#000; margin-top:9px">
+
+
+
+
+
+
+
+
+
+
+
+	<tr>
+	<td width="370" height="30" align="right" valign="top" >CC Number: <input name="cc" type="text" id="cc" value="" maxlength="25" /> </td>
+	<td  align="left" valign="top"><span id="ccMessageBox" style=" float:left"></span> </td>
+	</tr>
+
+		<input type="hidden" name="cc_type" id="cc_type" value="">
+		<input type="hidden" name="ccNum" id="ccNum" value="1">
+
+	<tr>
+	<td width="370" height="30" align="right" valign="top" >
+
+		<div style="float:right;padding-right:5px;">
+Expiration: 
+
+<select ID="month" name="month" class="verdana10dbluebold" >
+	<option value="0" selected="selected">Month</option>
+    <option value="01">Jan (1) </option>
+	<option value="02">Feb (2)</option>
+	<option value="03" >Mar (3) </option>
+	<option value="04" >Apr (4)</option>
+	<option value="05" >May (5)</option>
+	<option value="06" >June (6)</option>
+	<option value="07" >July (7)</option>
+	<option value="08" >Aug (8)</option>
+	<option value="09" >Sep (9)</option>
+	<option value="10" >Oct (10)</option>
+	<option value="11" >Nov (11)</option>
+	<option value="12" >Dec (12)</option>
+  </select>
+</div> 
+
+<div style="clear:both;margin-top:10px;"></div>
+
+
+
+
+<div style="float:right;padding-right:5px;">
+
+<select ID="year" name="year" class="verdana10dbluebold" >
+<option value="0" selected="selected">Year</option>
+
+
+<option value="2015" >2015</option>
+
+
+
+<option value="2016" >2016</option>
+
+
+
+<option value="2017" >2017</option>
+
+
+
+<option value="2018" >2018</option>
+
+
+
+<option value="2019" >2019</option>
+
+
+
+<option value="2020" >2020</option>
+
+
+
+<option value="2021" >2021</option>
+
+
+
+<option value="2022" >2022</option>
+
+
+
+<option value="2023" >2023</option>
+
+
+
+<option value="2024" >2024</option>
+
+
+
+<option value="2025" >2025</option>
+
+
+
+<option value="2026" >2026</option>
+
+
+
+<option value="2027" >2027</option>
+
+
+</select>
+
+</div>
+
+<div style="clear:both;margin-bottom:10px;"></div>
+
+
+	</td>
+	<td  align="left" valign="top">
+		<span id="expMessageBox" style=" float:left"></span> </td>
+	</tr>
+
+	<tr>
+	<td width="370" height="30" align="right" valign="top" >CVV Number: <input name="cvv" type="text" id="cvv" value="" maxlength="4" style="width:50px;" /> 
+	&nbsp; 
+	<a href="javascript:void(0);" onclick="jQuery('#dialog3').dialog('open'); return false">what is this?</a>
+	</td>
+	<td  align="left" valign="top"><span id="cvvMessageBox" style=" float:left"></span> </td>
+	</tr>
+
+
+ 
+
+</table>   
+
+<table width="580" style="color:#000; margin-top:6px">   
+	<div style="display:none;">
+	
+
+
+
+
+<select ID="birthYear" name="birthYear" class="verdana10dbluebold" >
+<option value="0">Select a Year</option>
+
+
+<option value="1940" >1940</option>
+
+
+
+<option value="1941" >1941</option>
+
+
+
+<option value="1942" >1942</option>
+
+
+
+<option value="1943" >1943</option>
+
+
+
+<option value="1944" >1944</option>
+
+
+
+<option value="1945" >1945</option>
+
+
+
+<option value="1946" >1946</option>
+
+
+
+<option value="1947" >1947</option>
+
+
+
+<option value="1948" >1948</option>
+
+
+
+<option value="1949" >1949</option>
+
+
+
+<option value="1950" >1950</option>
+
+
+
+<option value="1951" >1951</option>
+
+
+
+<option value="1952" >1952</option>
+
+
+
+<option value="1953" >1953</option>
+
+
+
+<option value="1954" >1954</option>
+
+
+
+<option value="1955" >1955</option>
+
+
+
+<option value="1956" >1956</option>
+
+
+
+<option value="1957" >1957</option>
+
+
+
+<option value="1958" >1958</option>
+
+
+
+<option value="1959" >1959</option>
+
+
+
+<option value="1960" >1960</option>
+
+
+
+<option value="1961" >1961</option>
+
+
+
+<option value="1962" >1962</option>
+
+
+
+<option value="1963" >1963</option>
+
+
+
+<option value="1964" >1964</option>
+
+
+
+<option value="1965" >1965</option>
+
+
+
+<option value="1966" >1966</option>
+
+
+
+<option value="1967" >1967</option>
+
+
+
+<option value="1968" >1968</option>
+
+
+
+<option value="1969" >1969</option>
+
+
+
+<option value="1970" >1970</option>
+
+
+
+<option value="1971" >1971</option>
+
+
+
+<option value="1972" >1972</option>
+
+
+
+<option value="1973" >1973</option>
+
+
+
+<option value="1974" >1974</option>
+
+
+
+<option value="1975" >1975</option>
+
+
+
+<option value="1976" >1976</option>
+
+
+
+<option value="1977" >1977</option>
+
+
+
+<option value="1978" >1978</option>
+
+
+
+<option value="1979" >1979</option>
+
+
+
+<option value="1980" >1980</option>
+
+
+
+<option value="1981" >1981</option>
+
+
+
+<option value="1982" >1982</option>
+
+
+
+<option value="1983" >1983</option>
+
+
+
+<option value="1984" >1984</option>
+
+
+
+<option value="1985"  selected="selected">1985</option>
+
+
+
+<option value="1986" >1986</option>
+
+
+
+<option value="1987" >1987</option>
+
+
+
+<option value="1988" >1988</option>
+
+
+
+<option value="1989" >1989</option>
+
+
+
+<option value="1990" >1990</option>
+
+
+
+<option value="1991" >1991</option>
+
+
+
+<option value="1992" >1992</option>
+
+
+
+<option value="1993" >1993</option>
+
+
+
+<option value="1994" >1994</option>
+
+
+
+<option value="1995" >1995</option>
+
+
+
+<option value="1996" >1996</option>
+
+
+
+<option value="1997" >1997</option>
+
+
+
+<option value="1998" >1998</option>
+
+
+
+<option value="1999" >1999</option>
+
+
+
+<option value="2000" >2000</option>
+
+
+
+<option value="2001" >2001</option>
+
+
+
+<option value="2002" >2002</option>
+
+
+
+<option value="2003" >2003</option>
+
+
+
+<option value="2004" >2004</option>
+
+
+
+<option value="2005" >2005</option>
+
+
+
+<option value="2006" >2006</option>
+
+
+
+<option value="2007" >2007</option>
+
+
+
+<option value="2008" >2008</option>
+
+
+
+<option value="2009" >2009</option>
+
+
+
+<option value="2010" >2010</option>
+
+
+
+<option value="2011" >2011</option>
+
+
+
+<option value="2012" >2012</option>
+
+
+
+<option value="2013" >2013</option>
+
+
+
+<option value="2014" >2014</option>
+
+
+
+<option value="2015" >2015</option>
+
+
+</select>
+	<span id="birthYearMessageBox" style=" float:left"></span>
+	</div>
+
+	<div style="display:none;">
+	<input type="radio" name="gender" value="M" checked />
+	</div>
+
+</table>
+
+			<div align="left" style="font-size:9px; padding:6px 0px 6px 98px; width:390px;">
+
+				<div id="paymentFooterDetails">
+
+
+	
+		Your premium membership starts with a 15 day free trial that will begin when you complete the fields above and click "Start Your Membership". If you are not satisfied with your trial membership, you can cancel anytime in your first 15 days and you will not be charged. To cancel or turn off auto-renewal at anytime, click on the "My Account" link located at the top of any Surfline.com webpage and follow the cancellation instructions. If you are enjoying being a premium member, do nothing and your subscription will be billed and automatically continue at the current premium plan rate (currently $69.99 a year) which will be charged to the payment method you provided above. See terms and conditions for additional membership details.
+	
+	<BR />
+
+
+</div>
+
+			<div style="padding-top:6px; font-size:12px; padding-left:40px"><input type="checkbox" name="over13" />I am over 13 years of age.&nbsp;&nbsp;&nbsp;<span class="over13MessageBox"></span></div>
+			<div style="padding-top:6px; font-size:12px; padding-left:40px"><input type="checkbox" name="toc" />I agree to the above terms and conditions.&nbsp;&nbsp;&nbsp;<span class="tocMessageBox"></span></div>
+                     </div>
+
+              	<div align="center" style="width:100%; padding-top:12px;margin-left:80px;">
+              	<div style="float:left;">
+			<button id="stage3Back" style="float:left;margin-right:10px;display: inline-block;*display: inline;vertical-align: baseline;margin: 0 2px;outline: none;cursor: pointer;text-align: center;	text-decoration: none;font-weight:bold;font: 11px/100% Verdana, Geneva, sans-serif;padding: 7px 10px 7px 10px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2);color:rgb(35,35,35);border:solid 1px rgb(150,150,150);background:rgb(230,230,230);">Back to Step 3</button>
+		</div>
+
+		<div style="float:left;">
+			
+				<button id="stage4Submit" class="funnel-button" style="float:left;">Start Premium Now</button>
+			
+		</div>
+
+
+		<div style="clear:both;">&nbsp;</div>
+		<div style="float:left;">
+			<button id="stage4BackToInfo" class="funnel-button" style="float:left;display:none;">Update Your Address</button>
+		</div>
+
+                </div>
+
+            </div>
+
+  	              <div id="stage5"  style="height:270px; display:none">
+
+  	         
+          	 <div id="subFormElements" style="margin-bottom:100px;"></div>
+
+		
+			
+			
+		
+
+        <div align="center" style="width:100%;padding-top:12px;">
+
+              	<div>
+				<button id="stage4Back" style="display: inline-block;*display: inline;vertical-align: baseline;margin: 0 2px;outline: none;cursor: pointer;text-align: center;	text-decoration: none;font-weight:bold;font: 11px/100% Verdana, Geneva, sans-serif;padding: 7px 10px 7px 10px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2);color:rgb(35,35,35);border:solid 1px rgb(150,150,150);background:rgb(230,230,230);display:none;">Back to Payment Information</button> &nbsp; &nbsp;
+				</div>
+
+		<div style="clear:both;">&nbsp;</div>
+
+		<div id="successbuttons" style="display:none;"></div>
+		
+
+                </div>
+
+  	              </div>
+
+
+		<div class="clear"></div>
+
+            </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+<div class="clear" style="margin-top:10px;">&nbsp;</div>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    $("#dialog1").dialog({
+      bgiframe: true, autoOpen: false, width: 640, height: 360, modal: true,
+		buttons: {
+		Close: function() {
+		$(this).dialog('close');
+		}
+    	}
+    });
+
+    $("#dialog2").dialog({
+      bgiframe: true, autoOpen: false, width: 640, height: 360, modal: true,
+		buttons: {
+		Close: function() {
+		$(this).dialog('close');
+		}
+	}
+    });
+
+    $("#dialog3").dialog({
+      bgiframe: true, autoOpen: false, width: 460, height: 430, modal: true,
+		buttons: {
+		Close: function() {
+		$(this).dialog('close');
+		}
+	}
+    });
+
+  });
+
+</script>
+
+
+
+
+<div class="clear"></div>
+
+
+
+
+<div style="font-size:11px;text-align:center;clear:both;margin:12px auto;">
+	&copy; Copyright 2015 Surfline/Wavetrak, Inc. Use of this site is subject to the following <a href="/terms_conditions.cfm" target="_blank">Terms and Conditions</a> and <a href="/privacy.cfm" target="_blank">Privacy Policy</a>
+
+	<div class="clear"></div>
+</div>
+
+
+
+<div class="clear"></div>
+
+</div>
+
+</div>
+
+<div id="hiddenActionDiv"></div>
+
+<div id="trackingDiv">
+
+
+
+</div>
+
+
+
+<div id="footer-a"></div>
+
+</div><!--wrapper-->
+
+
+
+
+<div id="googleTrackingDiv"></div>
+
+<div id="googleBWTrackingDiv"></div>
+
+<div id="bingTrackingDiv"></div>
+
+<div id='facebookPixelSurflineDiv'></div>
+<div id='facebookPixelBuoyweatherDiv'></div>
+<div id='facebookPixelFishTrackDiv'></div>
+
+<div id="dialog1" title="" style="display:none;">
+<b>HOW A PREMIUM MEMBERSHIP WORKS</b><br /><br />
+
+After completing the 15 day free trial sign up by clicking "Start Your Membership" on Step 4, you are instantly given access to Premium member benefits on surfline.com, our mobile website (for your mobile phone browser) at mobile.surfline.com, and on our iPhone and Android app.<br /><br />
+
+You'll enjoy HD cams with NO ads, up to 14 day surf forecasts, custom surf alerts, surf shop discounts (not included in trial), surf travel discounts (not included in trial), and much more. You can use Surfline Premium immediately and as often as you want, any time you want.<br /><br />
+
+For your convenience, we take your credit/debit card information so that your membership will not be interrupted when your 15 day free trial ends. If you cancel prior to the end of your 15 day free trial, you will not be charged.  You will remain a Surfline registered member and can re-activate Premium access any time.<br /><br />
+
+If you start a 15 day free trial, once your free trial period ends, you are authorizing us to automatically charge your card for your membership at the price of the plan you have chosen in Step 3: Choose Your Membership.<br /><br />
+
+You may change your card information or cancel your charge authorization or automatic renewal any time by clicking the "My Surfline" link located at the top of any surfline.com page.<br /><br />
+
+We accept all major credit cards, along with ATM or debit cards that have a Visa or Mastercard logo.<br /><br />
+
+Your credit card information is safe. We use SSL encryption technology to secure our transactions and DO NOT and WILL NEVER store your credit card numbers. We value you as a surfer, your privacy as a person, and truly appreciate your membership.
+</div>
+
+<div id="dialog2" title="" style="display:none;">
+<b>IS A PREMIUM MEMEBERSHIP WORTH IT?</b><br /><br />
+
+If you buy one year of Surfline Premium you will be paying 19 cents a day for access to HD surf cams on the web and our mobile site, as well as long-range forecasts, custom 5 day surf alerts, and much more. The savings from surf gear and travel discounts could alone easily pay for a yearly membership. To do what surfers expect, costs money, plain and simple. Without charging for Premium access, we would not be able to do what we do for surfers. But, don't listen to us, read below and see what our premium members think.<br /><br />
+
+"I live 13 miles from the spots I surf, and the IRS says it costs an average $0.55 to drive one mile in a car. It costs me over $11 to drive to the beach and check the surf.  At approx. $6 a month, Surfline is cheaper than one trip to the beach."<br />
+Ken<br />
+Central California Surfer<br /><br />
+
+"There is not an internet session that goes by that I don't look at LOLA. It's so cool to check out places you have been or are going and get an up-to-the-minute look at what is happening. Thanks Sean and Co. You hooked my brother and I up at Natividad when I was 15 and now you do everyday."<br /> 
+Kelly Slater
+
+<br /><br />
+"I love Surfline because I don't have to be living beachfront to know if the swell did or did not show in the morning. I just get to wake up, stay cozy in the sheets and check my local cam for any lines in the ocean. Stoked! Also if there looks to be nothing out there, I just check for the forecast and have fun accordingly!!!"<br />
+Tanner Gudauskas<br /><br />
+
+"As a wave rider my life schedule is dictated by the surf. Knowing when to go is as important as where to go. Surfline is the only source for both of these answers."<br />
+Mike Stewart<br />
+Bodyboarding Legend<br /><br />
+
+"I also wanted to say that Surfline consistently has the best surfing content on the internet! I check multiple sites each day and nothing compares to Surfline."<br />
+Kyle Stocks<br />
+Science Lab Teacher
+</div>
+
+<div id="dialog3" title="What is CVV?" style="display:none;">
+	<div style="width:350px;">
+
+		<div style="width:345px;font-weight:bold;font-size:11px;">
+		Visa, Mastercard and Discover (back of card)
+		</div>
+		<div style="clear:both;height:5px;">&nbsp;</div>
+
+		<div style="width:215px;float:left;">
+		<img src="/subscribe/visa-card-back.jpg" width="198" height="113" border="0">
+		</div>
+		<div style="float:left:width;120px;font-size:11px;">
+		<br />Your <b>3-digit</b> security code is on the back of your credit card, just to the right of the signature box.
+		</div>
+
+		<div style="clear:both;height:15px;">&nbsp;</div>
+
+		<div style="width:400px;font-weight:bold;font-size:11px;">
+		American Express (front of card)
+		</div>
+		<div style="clear:both;height:5px;">&nbsp;</div>
+
+		<div style="width:215px;float:left;">
+		<img src="/subscribe/american-card.jpg" width="198" height="110" border="0">
+		</div>
+		<div style="float:left:width;120px;font-size:11px;">
+		<br />Your <b>4-digit</b> security code is printed on the front of your card, just above your credit card number.
+		</div>
+
+	</div>
+</div>
+
+
+  <script type="text/javascript">
+    // KM Ad Campaign Hit
+    try {
+       jQuery(function(){
+           var adCampaignHit = newKissSl(kisssl);
+           adCampaignHit.init({
+               "SiteCatalyst": (typeof s !== 'undefined')?s:{},
+               callback: function(){
+                  var globalVars = this.userDataObj;                    
+                  globalVars['Campaign Source'] = "LOGIN";
+                  globalVars['Campaign Name'] = "LOGIN-MODALimages/surfline-funnel-logo2.gif";
+                  globalVars['Marketing Key'] = "login";
+                  if(console){
+                    console.log("'Ad Campaign Hit' , globalVars: ", globalVars);
+                  };
+                  _kmq.push(['record', 'Ad Campaign Hit', globalVars]);
+               }
+           });
+       });
+    } catch(err) {
+        if(console) {
+          console.log("Issue with KM tracking for 'Ad Campaign Hit': ", err);
+        };
+    };
+  </script>
+
+
+
+<!-- KISSmetrics tracking snippet -->
+<script type="text/javascript">var _kmq = _kmq || [];
+var _kmk = _kmk || '549d1efd481064562bb1e58acf417f7a186859d0';
+function _kms(u){
+  setTimeout(function(){
+    var d = document, f = d.getElementsByTagName('script')[0],
+    s = d.createElement('script');
+    s.type = 'text/javascript'; s.async = true; s.src = u;
+    f.parentNode.insertBefore(s, f);
+  }, 1);
+}
+_kms('//i.kissmetrics.com/i.js');
+_kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
+ 
+
+
+<!--CGI.REMOTE_ADDR:192.168.147.11 -->
+
+<script src="omniture_track_js.cfm?siteID=1" type="text/javascript"></script>
+
+
+<script language="javascript">
+	sendTrackingData(1,'');
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+

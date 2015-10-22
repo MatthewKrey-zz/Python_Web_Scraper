@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+<title>404 PAGE NOT FOUND | FISHTRACK.COM</title>
+<meta name="description" content="404 Page" />
+<meta name="keywords" content="404" />
+<meta name="classification" content="general" />
+<meta http-equiv="Content-Type" content="charset=UTF-8;" />
+<meta name="robots" content="index, follow" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="distribution" content="Global" />
+<meta name="msvalidate.01" content="2F2030EA55CDE9975B498D4A9788E8A3" />
+<meta name="google-site-verification" content="EJb0XS0lumvqC-H-FXiBEIjoWoO8g0uSPNXL6jXYRos" />
+<link rel="canonical" href="http://www.fishtrack.com" />
+<link href="http://www.fishtrack.com/global_includes/css/global_styles.css" type="text/css" rel="stylesheet" />
+<link href="http://www.fishtrack.com/global_includes/css/global_styles_print.css"  type="text/css" media="print" rel="stylesheet" />
+<link href='http://i.cdn-surfline.com/fishtrack/2012/assets/ftrack_favicon.ico' rel='shortcut icon' type='image/x-icon' />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.fishtrack.com/global_includes/scripts/jquery.hoverIntent.minified.js" language="javascript"></script>
+<style>
+.module img  {
+	padding:0px;
+	padding-right:0px;
+}
+.module h3 {
+	padding-top:20px;
+	font-size: 18px;
+}
+.module p {
+	padding-top:20px;
+	padding-right:10px;
+	font-size: 14px;
+}
+.module {
+    padding:0px;
+}
+#content {
+    padding:0px;
+    position: relative;
+}
+#main-content {
+    background-color:rgba(255,255,255,0.75);
+    position:absolute;
+    top:60px;
+    left:140px;
+    height:175px;
+    width:700px;
+    text-align: center;
+    padding:12px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#main-content h1 {
+    font-size: 16pt;
+}
+
+#q {
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    width:170px;
+    position:relative;
+    left:20px;
+    z-index: 2;
+    margin-top: 12px;
+    background: url('http://e.cdn-surfline.com/fishtrack/images/search-icon-small.png') #ffffff no-repeat 8px 4px;
+    padding-left:34px;
+}
+.fishtrack-button {
+    height:26px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    padding:0px 12px 0px 40px;
+    position:relative;
+    left:-20px;
+    z-index: 1;
+}
+</style>
+<script type='text/javascript' language='JavaScript'>
+jQuery(document).ready(function(){
+    jQuery.ajax({
+        url : '/global_includes/header/full/inc_header_top_free-iframe.cfm', 
+        success : function(data){
+            jQuery('#header-container').html(data);
+            jQuery('#header-container #logincontainer').hide();
+        }
+    });
+    jQuery('#footer-container').load('/global_includes/footer/inc_global_footer.cfm');
+});
+</script>
+</head>
+<body>
+
+<div id="wrapper">
+
+    <div id='header-container'></div>
+
+    <!--
+    <div align="center">    
+        <div id="header">
+            <a href="http://www.fishtrack.com"><img src="http://i.cdn-surfline.com/fishtrack/2012/assets/ftracklogo.png" alt="FishTrack" border="0" class="logo" height="26px" width="147px" alt="Fishing Tools and Charts"></a><div class="clear"></div>
+        </div>
+        <div id="navigation">
+            <a href="http://www.fishtrack.com/">Home</a>
+            <a href="http://www.fishtrack.com/fishing-charts/">Fishing Charts</a>
+            <a href="http://destination-finder.fishtrack.com">Destination Finder</a>
+            <a href="http://www.fishtrack.com/getting-started/">Getting Started</a>
+            <a href="http://www.fishtrack.com/page.cfm?id=66557">Contact Us</a>
+            <div class="clear"></div>
+        </div>    
+    </div>
+    -->
+<div id="content">
+    <div class="module full first">	
+        <div id="splash-image">
+            <img src="http://e.cdn-surfline.com/fishtrack/images/404/404-fish-bg.jpg" width="990px" />
+            <div id="main-content">
+            <h1>PAGE NOT FOUND</h1>
+            <div id='search-container'>
+                <form action='/search' method='get' id='header-search-form'>
+                    <input type='text' name='q' id='q' placeholder='Enter a keyword'> 
+                    <button class='fishtrack-button lightblue' onclick='headerSearchGo();' />
+                        Go
+                    </button>
+                </form>
+            </div>
+            <p><strong>We're really sorry,</strong> but the page you were looking for isn't here. If you typed in a URL to get here, double check it. If you followed a link to get here, <strong><a href="mailto:support@fishtrack.com">let us know</a>.</strong> <br>You can try hitting refresh, and see if that helps.
+            </p>
+        </div>
+        </div>
+        
+    </div>
+</div>
+
+<div id="footer">
+    <div id='footer-container'></div>
+    <!--
+    <div id="global_footer">
+	   <div id="footer-bar">&nbsp;</div>
+        <ul id="branding_sharing">
+            <li id="tagline">&nbsp;</li>
+            <li>&nbsp;</li>
+            <li><strong>CONNECT</strong></li>
+            <li>
+            <a href="http://twitter.com/fishtrack" target="_blank" class="social_icon twitter">Twitter</a>
+            <a href="https://www.facebook.com/pages/FishTrack/181147781970533" target="_blank" class="social_icon facebook">Facebook</a>
+          	<a href="https://plus.google.com/u/0/b/112438790789920188423/112438790789920188423/posts" target="_blank" class="social_icon googleplus">Google +</a>
+            </li>
+            <li>&nbsp;</li>
+            <li>&copy; 2012 FishTrack <br />
+            <a href="/terms-and-conditions/">Terms & Conditions</a> and <a href="/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+        <div id="footer_links_container">
+            <ul>
+            <li><strong>SECTIONS</strong></li>
+            <li>&nbsp;</li>
+
+            <li><a href="http://www.fishtrack.com/">Home</a></li>
+            <li><a href="http://www.fishtrack.com/fishing-charts/">Fishing Charts</a></li>
+            <li><a href="http://destination-finder.fishtrack.com">Destination Finder</a></li>
+            <li><a href="http://www.fishtrack.com/getting-started/">Getting Started</a></li>
+            </ul>			
+            <ul>
+            <li><strong>COMPANY</strong></li>
+
+            <li>&nbsp;</li>
+            <li><a href="http://www.fishtrack.com/about-us/">About FishTrack</a></li>
+            <li><a href="http://www.fishtrack.com/contact-us/">Contact</a></li>
+            <li><a href="http://www.fishtrack.com/advertise/">Advertise</a></li>
+            </ul>
+            <ul>
+            <li><strong>SUPPORT</strong></li>
+
+            <li>&nbsp;</li>
+            <li><a href="http://www.fishtrack.com/contact-us/">Contact Support</a></li>
+            <li><a href="http://www.fishtrack.com/getting-started/">Tutorials</a></li>
+            <li><a href="http://www.fishtrack.com/frequently-asked-questions/">FAQ</a></li>
+            </ul>			
+            <ul>
+            <li><strong>Network</strong></li>
+
+            <li>&nbsp;</li>
+            <li><a href="http://www.buoyweather.com" target="_blank">Marine Weather</a></li>
+            <li><a href="http://www.beachlive.com" target="_blank">Beach Weather</a></li>
+            <li><a href="http://www.surfline.com" target="_blank">Surf Cams</a></li>
+            <li><a href="http://www.surfaidinternational.org" target="_blank">SurfAid</a></li>
+            <li><a href="http://www.surfrider.com" target="_blank">Surfrider</a></li>
+
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    -->
+</div>
+
+
+<!-- Begin SiteCatalyst Code -->
+<!-- 404 PAGES ARE HARD CODED OMNITURE -->
+
+<script language="JavaScript" src="/global_includes/scripts/s_code.js"></script>
+<script language="JavaScript">
+ <!--
+/* SiteCatalyst Variables */
+s.channel=""
+s.server=""
+s.pageType="errorPage"
+s.prop1=""
+s.prop2=""
+s.prop3=""
+s.prop4=""
+s.prop5=""
+s.prop6=""
+s.events=""
+s.campaign=""
+s.prop7=""
+s.prop8=""
+s.prop9=""
+s.prop10="" 
+s.prop11=""
+s.prop12=""
+s.hier1=""
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+
+ 
+<!-- End SiteCatalyst Code -->
+</body>
+</html>

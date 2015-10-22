@@ -6,7 +6,7 @@ import re
 from bs4 import BeautifulSoup
 from IPython import embed
 
-BASE_URL = "https://en.wikipedia.org/wiki/Cancer"
+BASE_URL = "http://www.surfline.com/home/index.cfm"
 
 def make_soup(BASE_URL):
     html = urllib.urlopen(BASE_URL).read()
@@ -24,7 +24,7 @@ def get_image_links(BASE_URL):
         try:
             external_soup = make_soup(site)
             external_image = external_soup.img.get('src')
-            urllib.urlretrieve(site + external_image, "downloaded_image" + str(i) + re.findall('\.jpg$|\.jpeg$|\.png$|\.gif$', external_image)[0])
+            urllib.urlretrieve(site + external_image, "Output/downloaded_image" + str(i) + re.findall('\.jpg$|\.jpeg$|\.png$|\.gif$', external_image)[0])
             external_images.append(external_image)
             i += 1
         except(IOError, AttributeError, TypeError, IndexError):
