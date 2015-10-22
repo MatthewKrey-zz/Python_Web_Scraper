@@ -1,0 +1,667 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><link rel="shortcut icon" type="image/x-icon" href="../../../../../Images/favicon.ico" />
+    <script type="text/javascript">
+        function WindowShow(oWin, args) {
+            var isPinned = oWin.isPinned();
+            if (!isPinned) {
+                oWin.togglePin();
+            }
+        }
+        window.onload = montre;
+        function montre(id, idM) {
+            var d = document.getElementById(id);
+            var dM = document.getElementById(idM);
+            for (var i = 1; i <= 20; i++) {
+                if (document.getElementById('sousMenu' + i)) { document.getElementById('sousMenu' + i).style.display = 'none'; }
+            }
+            if (d) { d.style.display = 'block'; }
+        }
+
+        //the following code use radconfirm to mimic the blocking of the execution thread.
+        //The approach has the following limitations:
+        //1. It works inly for elements that have *click* method, e.g. links and buttons
+        //2. It cannot be used in if(!confirm) checks
+        window.blockConfirm = function(text, mozEvent, oWidth, oHeight, callerObj, oTitle) {
+            var ev = mozEvent ? mozEvent : window.event; //Moz support requires passing the event argument manually 
+            //Cancel the event 
+            ev.cancelBubble = true;
+            ev.returnValue = false;
+            if (ev.stopPropagation) ev.stopPropagation();
+            if (ev.preventDefault) ev.preventDefault();
+
+            //Determine who is the caller 
+            var callerObj = ev.srcElement ? ev.srcElement : ev.target;
+
+            //Call the original radconfirm and pass it all necessary parameters 
+            if (callerObj) {
+                //Show the confirm, then when it is closing, if returned value was true, automatically call the caller's click method again. 
+                var callBackFn = function(arg) {
+                    if (arg) {
+                        callerObj["onclick"] = "";
+                        if (callerObj.click) callerObj.click(); //Works fine every time in IE, but does not work for links in Moz 
+                        else if (callerObj.tagName == "A") //We assume it is a link button! 
+                        {
+                            try {
+                                eval(callerObj.href)
+                            }
+                            catch (e) { }
+                        }
+                    }
+                }
+
+                radconfirm(text, callBackFn, oWidth, oHeight, callerObj, oTitle);
+            }
+            return false;
+        }
+        function OnClientClose(radWindow) {
+            if (radWindow.Argument != null & radWindow.Argument == 'ConfirmMessage') {
+                radWindow.Argument = null;
+                if (radWindow._name == 'frmCoordonneesPostale') {
+                    $find("RadToolTip1").show();
+                    return;
+                }
+                if (radWindow._name == 'frmMsg') {
+                    $find("RadToolTip2").show();
+                    return;
+                }
+            }
+            if (radWindow._name == 'frmConfirmRegister') {
+                document.location.href = "summary.aspx";
+            }
+            if (radWindow._name == 'frmConfirmAbonnement') {
+                document.location.href = "CampusSummary.aspx";
+            }
+            if (radWindow._name == 'frmConfirmKit') {
+                var path = location.href.substring(0, location.href.lastIndexOf("/") - 1);
+                path = path + "CampusSummary.aspx";
+                document.location.href = path;
+            }
+            if (radWindow._name == 'frmLoginFailure') {
+                var msg = radWindow.msg;
+                if (msg == 'ToLogin') {
+                    document.location.href = "/en/Login.aspx?ReturnUrl=";
+                }
+                if (msg == 'ToRegister') {
+                    document.location.href = "Register.aspx";
+                }
+                if (msg == 'ToRecover') {
+                    document.location.href = "RecoverPassword.aspx";
+                }
+            }
+        }
+        function CloseTooltip() {
+            if ($find("RadToolTip1") != null) {
+                $find("RadToolTip1").hide();
+            }
+            if ($find("RadToolTip2") != null) {
+                $find("RadToolTip2").hide();
+            }
+        }
+        //        window.onblur = SetStyle();
+        function CloseBlocA(objId1, objId2) {
+            var obj = null;
+            with (document) { if (getElementById) obj1 = getElementById(objId1); }
+            with (document) { if (getElementById) obj2 = getElementById(objId2); }
+            if (obj1) {
+                var maClasse = obj1.className;
+                var maPos = maClasse.indexOf('listeMontre');
+                var leReste = maClasse.substring(0, maPos) + maClasse.substring(maPos + 11);
+                if (maPos == -1) { obj1.className = "listeCache" + leReste; } else { obj1.className = "listeCache" + leReste; }
+            }
+            if (obj2) {
+                var maClasse = obj2.className;
+                var maPos = maClasse.indexOf('depliA');
+                if (maPos == -1) { obj2.className = "repliA"; } else { obj2.className = "repliA"; }
+            }
+        }
+        function CloseBlocB(objId1, objId2) {
+            var obj = null;
+            with (document) { if (getElementById) obj1 = getElementById(objId1); }
+            with (document) { if (getElementById) obj2 = getElementById(objId2); }
+            if (obj1) {
+                var maClasse = obj1.className;
+                var maPos = maClasse.indexOf('listeMontre');
+                var leReste = maClasse.substring(0, maPos) + maClasse.substring(maPos + 11);
+                if (maPos == -1) { obj1.className = "listeCache" + leReste; } else { obj1.className = "listeCache" + leReste; }
+            }
+            if (obj2) {
+                var maClasse = obj2.className;
+                var maPos = maClasse.indexOf('depliB');
+                if (maPos == -1) { obj2.className = "repliB"; } else { obj2.className = "repliB"; }
+            }
+        }
+        function CloseAllBloc() {
+            CloseBlocA('NewsLettersSubscriptionContent', 'NewsLettersSubscription');
+            CloseBlocA('changeAccessKeysContent', 'changeAccessKeys');
+            CloseBlocA('ChangePostalAddressContent', 'ChangePostalAddress');
+            CloseBlocA('SendMessageToPrescrireContent', 'SendMessageToPrescrire');
+
+            CloseBlocB('InterestCenterNewsLettersContent', 'InterestCenterNewsLetters');
+            CloseBlocB('EENewsLetterContent', 'EENewsLetter');
+            CloseBlocB('ChangePwdContent', 'ChangePwd');
+            CloseBlocB('ChangeLoginContent', 'ChangeLogin');
+        }
+    </script>
+    <title>
+	Prescrire IN ENGLISH - Spotlight: Archive ''Vitamins and minerals: ineffective in preventing cancer and cardiovascular disease'',  1 September 2010
+</title>
+    
+
+        <script type="text/javascript">
+//            function openSendMailToFriend() {
+//                //window.radopen("SendMailToFriend.aspx?clippingid=" + '47180', "frmSendMailToFriend");
+//                window.radopen('/en/SendMailToFriend.aspx?clippingid=47180', "frmSendMailToFriend");
+//                //alert('/en/SendMailToFriend.aspx?clippingid=47180');
+//                return false;
+//            }           
+        </script>
+
+    
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-20134145-1']);
+        _gaq.push(['_setDomainName', '.prescrire.org']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+<link href="../../../../../App_Themes/English/English.css" type="text/css" rel="stylesheet" /><link href="/en/WebResource.axd?d=aycSJ_oY6wH5csmsNY8pdjMH7cEOQzAzntedEk0Ym2PpL7zkhy0j12DmHSCt_elBWqYr9YAC7XRWS60qGTYK78utqsFs1n13nTs5BiUEImi7GKqc5z8qP_sjmALTmqN3530nYvKKq1xh5dFB7tMn5EX9zi9p_L9DodzQ5OdEsMt5Gbke0&amp;t=635313611266850000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/en/WebResource.axd?d=OwuHTywchEnBMH6XvvQNGLJCRTlQWL9PfPKenqes6MvUIewHb77Se9bjhbSVRj2Mbn36Mz3K6WjxrXxM8O7gTUeOAaEcWe4EMk_1RgD6TCD7JVOEWL5WR59AM-dShXWuiY-x5PxCungQIeRnaa2O06IlfFHdWI5EU67D3dXW2Uo6hbmxa_m_tZpFTnh5yiYNfnyiGw2&amp;t=635313611266850000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/en/WebResource.axd?d=oY1ZqqHHhv1itavnPp_Qbltutyu6vaQ0krjHG8ykLwkp7FnyEjXIQCcSK9vHdMyEn1PNHL3D7nJhdIYyIozNcdGDvBGMxgQZlkKo7wZjaAAXIGMe2K3iGTLFIkbXMCX_BwLShg51FiQzLj6QPZeBKO35JZO3oFME6VXPg_yI2Ql3bz4U0&amp;t=635313611266850000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/en/WebResource.axd?d=QbexfE7VaE4mHJRIfDzXEM9w3pdPJKV3pWxYXK2DXJIQgI8EyOUWNBXwm3BBYIWWkqsp5OC_FZmb9EzlScX9gWburSdq5kah46bJgqkiWlnmLEQP0yEsBnch22TdsRCkPBBz9DTKgWvZB558sef6ACy_h6ZZ1zppjOOZVs5kVxodcIo58FTEiJTEPnpj9St-dK1Rrw2&amp;t=635313611266850000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /></head>
+<body id="haut">
+    <form method="post" action="ArchiveNewsDetails.aspx?page=2..%2f..%2f..%2f..%2f..%2fImages%2fEnglish_Logo.jpg" id="form1">
+<input type="hidden" name="RadScriptManager_TSM" id="RadScriptManager_TSM" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/en/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=RadScriptManager_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3af319b152-218f-4c14-829d-050a68bb1a61%3aea597d4b%3bTelerik.Web.UI%2c+Version%3d2009.3.1208.20%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3a0d8e1f65-7492-499f-bc1d-d6dcea420537%3a16e4e7cd%3a874f8ea2%3af7645509%3a24ee1bba%3a19620875%3a33108d14%3abd8f85e4%3a39040b5c" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EFA9064B" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="R5XC95xMUwoqItuozU/yectEwBwHMWUve1k7xXA+vH9qmfGmEQQW+4teOCa34FL1R8hCIlxWt/Dp7/0T3mB6JDg4gBY9N4NeXcS99kscBhofrZfZ0+XIFSoRE40ilZg5oHXSPGEd7ImZzbGBey3zQvWN5B68C7Lf5j3Dcw==" />
+    
+     <div id="RadWindowManager1" style="display:none;">
+	<!-- 2009.3.1208.20 --><div id="RadWindowManager1_alerttemplate" style="display:none;">
+		<div class="rwDialogPopup radalert">			
+			<div class="rwDialogText">
+			{1}				
+			</div>
+			
+			<div>
+				<a  onclick="$find('{0}').close();"
+				class="rwPopupButton" href="javascript:void(0);">
+					<span class="rwOuterSpan">
+						<span class="rwInnerSpan">##LOC[OK]##</span>
+					</span>
+				</a>				
+			</div>
+		</div>
+		</div><div id="RadWindowManager1_prompttemplate" style="display:none;">
+		 <div class="rwDialogPopup radprompt">			
+			    <div class="rwDialogText">
+			    {1}				
+			    </div>		
+			    <div>
+				    <script type="text/javascript">
+				    function RadWindowprompt_detectenter(id, ev, input)
+				    {							
+					    if (!ev) ev = window.event;                
+					    if (ev.keyCode == 13)
+					    {															        
+					        var but = input.parentNode.parentNode.getElementsByTagName("A")[0];					        
+					        if (but)
+						    {							
+							    if (but.click) but.click();
+							    else if (but.onclick)
+							    {
+							        but.focus(); var click = but.onclick; but.onclick = null; if (click) click.call(but);							 
+							    }
+						    }
+					       return false;
+					    } 
+					    else return true;
+				    }	 
+				    </script>
+				    <input  onkeydown="return RadWindowprompt_detectenter('{0}', event, this);" type="text"  class="rwDialogInput" value="{2}" />
+			    </div>
+			    <div>
+				    <a onclick="$find('{0}').close(this.parentNode.parentNode.getElementsByTagName('input')[0].value);"				
+					    class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				    <a onclick="$find('{0}').close(null);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			    </div>
+		    </div>				       
+		</div><div id="RadWindowManager1_confirmtemplate" style="display:none;">
+		<div class="rwDialogPopup radconfirm">			
+			<div class="rwDialogText">
+			{1}				
+			</div>						
+			<div>
+				<a onclick="$find('{0}').close(true);"  class="rwPopupButton" href="javascript:void(0);" ><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[OK]##</span></span></a>
+				<a onclick="$find('{0}').close(false);" class="rwPopupButton"  href="javascript:void(0);"><span class="rwOuterSpan"><span class="rwInnerSpan">##LOC[Cancel]##</span></span></a>
+			</div>
+		</div>		
+		</div><div id="frmCoordonneesPostale" style="display:none;">
+		<div id="frmCoordonneesPostale_C">
+
+		</div><input id="frmCoordonneesPostale_ClientState" name="frmCoordonneesPostale_ClientState" type="hidden" />
+	</div><div id="frmMsg" style="display:none;">
+		<div id="frmMsg_C">
+
+		</div><input id="frmMsg_ClientState" name="frmMsg_ClientState" type="hidden" />
+	</div><div id="frmConfirmRegister" style="display:none;">
+		<div id="frmConfirmRegister_C">
+
+		</div><input id="frmConfirmRegister_ClientState" name="frmConfirmRegister_ClientState" type="hidden" />
+	</div><div id="frmConfirmAbonnement" style="display:none;">
+		<div id="frmConfirmAbonnement_C">
+
+		</div><input id="frmConfirmAbonnement_ClientState" name="frmConfirmAbonnement_ClientState" type="hidden" />
+	</div><div id="frmConfirmKit" style="display:none;">
+		<div id="frmConfirmKit_C">
+
+		</div><input id="frmConfirmKit_ClientState" name="frmConfirmKit_ClientState" type="hidden" />
+	</div><div id="frmLoginFailure" style="display:none;">
+		<div id="frmLoginFailure_C">
+
+		</div><input id="frmLoginFailure_ClientState" name="frmLoginFailure_ClientState" type="hidden" />
+	</div><div id="frmManySessions" style="display:none;">
+		<div id="frmManySessions_C">
+
+		</div><input id="frmManySessions_ClientState" name="frmManySessions_ClientState" type="hidden" />
+	</div><input id="RadWindowManager1_ClientState" name="RadWindowManager1_ClientState" type="hidden" />
+</div>
+    <div id="divPortail">
+        <div id="page">
+            <div id="divlogoPR">
+                <a href="../../../../../Summary.aspx" id="AhrefPR">
+                    
+                    <img src="../../../../../Images/English_Logo.jpg" id="Img_en" class="imglogo" alt="Prescrire IN ENGLISH - HOME" title="Prescrire IN ENGLISH - HOME" />                    
+                </a>
+            </div>
+            
+            
+            <div id="bandeau">                
+                
+                
+                <p id="connection">
+                    <span id="spanUserLoggedOut">
+                            <a id="hlRegister" href="../../../../../Register.aspx">Register online</a>
+                            |
+                            <a id="hlSignIn" href="../../../../../Login.aspx">Log in</a>
+                            | </span><a href="../../../../../Default.aspx">My Prescrire</a>
+                </p>
+            </div>
+            <div id="sousMenu">
+            </div>
+            <div id="menuPrincipal">
+                
+                <dl id="abonnes">
+  <dt id="menu1" onmouseout="javascript:montre('');" onmouseover="javascript:montre('sousMenu1', 'menu1');" class="courant199">
+    <a href="#">Issue contents</a>
+  </dt>
+  <dd id="sousMenu1" onmouseout="javascript:montre('');" onmouseover="javascript:montre('sousMenu1', 'menu1');">
+    <ul>
+      <li>
+        <a href="http://english.prescrire.org/en/RedirectTo.aspx">Current issue</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/Summaries.aspx">Last 12 issues</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/SummariesOfProduction.aspx">All issues</a>
+      </li>
+    </ul>
+  </dd>
+  <dd class="joli">
+  </dd>
+</dl>
+<dl id="abonnes">
+  <dt id="menu2" onmouseout="javascript:montre('');" onmouseover="javascript:montre('sousMenu2', 'menu2');" class="courant202">
+    <a href="#">Topics</a>
+  </dt>
+  <dd id="sousMenu2" onmouseout="javascript:montre('');" onmouseover="javascript:montre('sousMenu2', 'menu2');">
+    <ul>
+      <li>
+        <a href="http://english.prescrire.org/en/ReportList.aspx?sectionid=115">Annual Prescrire Awards</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/ReportList.aspx?sectionid=79">Advancing healthcare policy</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/PositionsList.aspx?sectionid=80">Positions</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/81/168/NewsList.aspx">Spotlight</a>
+      </li>
+    </ul>
+  </dd>
+  <dd class="joli">
+  </dd>
+</dl>
+<dl id="abonnes">
+  <dt id="menu3" onmouseout="javascript:montre('');" onmouseover="javascript:montre('sousMenu3', 'menu3');" class="courant206">
+    <a href="#">About Prescrire</a>
+  </dt>
+  <dd id="sousMenu3" onmouseout="javascript:montre('');" onmouseover="javascript:montre('sousMenu3', 'menu3');">
+    <ul>
+      <li>
+        <a href="http://english.prescrire.org/en/82/169/0/0/About.aspx">Who are we?</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/82/170/0/0/About.aspx">How we work</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/82/171/0/0/About.aspx">AMP: non-profit</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/82/172/0/0/About.aspx">Financing</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/82/173/0/0/About.aspx">"Non merci"</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/82/175/0/0/About.aspx">Where to find us</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/82/554/0/0/About.aspx">About Prescrire International</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/82/176/0/0/About.aspx">Testimonials</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/82/306/0/0/About.aspx">Prescrire events</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/82/177/0/0/About.aspx">A global network</a>
+      </li>
+    </ul>
+  </dd>
+  <dd class="joli">
+  </dd>
+</dl>
+<dl id="abonnes">
+  <dt id="menu4" onmouseout="javascript:montre('');" onmouseover="javascript:montre('sousMenu4', 'menu4');" class="courant215">
+    <a href="#">Offers</a>
+  </dt>
+  <dd id="sousMenu4" onmouseout="javascript:montre('');" onmouseover="javascript:montre('sousMenu4', 'menu4');">
+    <ul>
+      <li>
+        <a href="http://english.prescrire.org/en/83/178/0/0/About.aspx">Subscribe now</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/83/373/0/0/About.aspx">Solidarity Subscription Rate</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/83/588/0/0/About.aspx">Refer a friend or colleague</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/83/179/0/0/About.aspx">Subscribers: register online</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/83/180/0/0/About.aspx">Prescrire's other products</a>
+      </li>
+      <li>
+        <a href="http://english.prescrire.org/en/83/552/0/0/About.aspx">Sign up to receive the newsletter</a>
+      </li>
+    </ul>
+  </dd>
+  <dd class="joli">
+  </dd>
+</dl>
+                <div id="btnSearch">              
+                <div style="text-align: center;"><a id="hlSearch" href="../../../../../Search.aspx"><img src="../../../../../App_Themes/English/images/recherche/btnSearch_new.png" alt="" /></a></div>
+                                                           
+                </div>
+            </div>
+            <div style="background-color: white; padding-left: 70px">
+                <br />
+                <span id="SiteMapPath1"><font face="Arial"><span><a title="english.prescrire.org" href="/en/Summary.aspx"><font color="#666666">english.prescrire.org</font></a></span><span><b><font color="#666666"> &gt; </font></b></span><span><a title="Every month, the subjects in Prescrire’s Spotlight." href="/en/81/168/NewsList.aspx"><font color="#666666">Spotlight</font></a></span><span><b><font color="#666666"> &gt; </font></b></span><span><a title="Archives : 2010" href="/en/81/168/2010/ArchiveNewsList.aspx?page=2../../../../../Images/English_Logo.jpg"><font color="#666666">Archives : 2010</font></a></span><span><b><font color="#666666"> &gt; </font></b></span><span><b><font color="#666666">Vitamins and minerals: ineffective in preventing cancer and cardiovascular disease</font></b></span></font></span>
+            </div>
+            
+    <div id="identif">
+        <div class="logoRub">
+        
+            <img src="../../../../../../Docu/Images/Logos%20des%20rubriques/Site_Picto_Trait_News.jpg" id="ContentPlaceHolder1_Img1" />
+            
+        </div>
+        <div class="texte">
+            <h1>
+                Spotlight: Archives
+                </h1>
+            <p>
+                Every month, the subjects in Prescrire’s Spotlight.
+            </p>
+             <p id="ContentPlaceHolder1_rowPaging1" class="tournepage">
+                2010 : 
+            <a class="aspNetDisabled on">1</a><span>&nbsp|&nbsp</span><a href="../../../2010/ArchiveNewsList.aspx?page=2">30</a><span>&nbsp|&nbsp</span><a href="../../../2010/ArchiveNewsList.aspx?page=3">60</a><span>&nbsp|&nbsp</span><a href="../../../2010/ArchiveNewsList.aspx?page=4">90</a></p>
+            
+        </div>
+    </div>
+    <div id="ContentPlaceHolder1_divLeft">
+        <div id="menuLocal">
+            <h1>
+                Spotlight
+                </h1>
+            <ul>
+                <li><a href="../../../../../newslist.aspx?sectionid=81" id="ContentPlaceHolder1_LastArticles">100 most recent</a></li>
+                <li>Archives
+                    <ul>
+                        
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_0" href="../../../2015/ArchiveNewsList.aspx">2015</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_1" href="../../../2014/ArchiveNewsList.aspx">2014</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_2" href="../../../2013/ArchiveNewsList.aspx">2013</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_3" href="../../../2012/ArchiveNewsList.aspx">2012</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_4" href="../../../2011/ArchiveNewsList.aspx">2011</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_5" href="../../../2010/ArchiveNewsList.aspx"><b>2010</b></a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_6" href="../../../2009/ArchiveNewsList.aspx">2009</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_7" href="../../../2008/ArchiveNewsList.aspx">2008</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_8" href="../../../2007/ArchiveNewsList.aspx">2007</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_9" href="../../../2006/ArchiveNewsList.aspx">2006</a>
+                                </li>
+                            
+                                <li>
+                                    <a id="ContentPlaceHolder1_repYears_hl1_10" href="../../../2005/ArchiveNewsList.aspx">2005</a>
+                                </li>
+                            
+                    </ul>
+                </li>              
+              
+            </ul>
+        </div>
+    </div>
+    <div id="contenu">        
+        <table id="ContentPlaceHolder1_dlReport" cellspacing="0" width="100%">
+	<tr>
+		<td>
+                <h1>
+                    Vitamins and minerals: ineffective in preventing cancer and cardiovascular disease</h1>
+                
+                
+                <div id="ContentPlaceHolder1_dlReport_divHeading_0">
+                    <h2>
+                        <span id="ContentPlaceHolder1_dlReport_lbHeading_0"><div>No vitamin or mineral supplement has a proven benefit in preventing  cardiovascular disease or cancer in adults in developed countries.</div></span></h2>
+                </div>
+                <div id="ContentPlaceHolder1_dlReport_divText_0" class="divText">
+                    <div>
+                        <span id="ContentPlaceHolder1_dlReport_lbText_0" class="textsquelette"><p>No trial to date has shown that vitamin and mineral supplements prevent cardiovascular disease or cancer. <br />
+Trials conducted in 1997 showed that vitamins A, C and E, selenium and group B vitamins had no beneficial effect. Since then, in cardiovascular prevention, 2 trials involving more than 5000 women and over 1200 diabetics found that folic acid, vitamin B12 and antioxydants (especially vitamin A, vitamins B3, B6, vitamin C, and zinc) were ineffective.</p>
+<p>In cancer prevention, an initial trial carried out among over 14,000 men aged at least 50 showed that neither vitamin E, nor vitamin C had any impact on preventing prostate or any other cancer. Another trial involving more than 35,000 patients aged 50 and over also showed that neither selenium, nor vitamin E were any more effective than placebo in preventing prostate cancer or other disease.</p>
+<p>Vitamins and minerals have been shown to be ineffective in preventing cardiovascular disease.</p>
+<p>If people want to prevent disease through diet, the best advice is to follow the Mediterranean diet.</p>
+<p><span class="CopyrightUne">&copy;Prescrire September 2010</span><span class="ReferencePDF"><br />
+</span></p>
+<p><span class="ReferencePDF"><a target="_blank" href="/en/F64FB09E931BA74243C87B62BBA1E035/Download.aspx">&quot;Vitamins and minerals: not for cancer or cardiovascular prevention&quot; Prescrire&nbsp;Int 2010; 19 (108): 182 (pdf, subscribers only).</a></span></p>
+<p>&nbsp;</p></span></div>
+                </div>
+                
+            </td>
+	</tr>
+</table>
+    </div>
+      <div id="complements">
+             <div style="margin: 0 0 0 0;padding: 0 0 0 5px;"><div>Download the full review</div>
+<div><a href="/en/F64FB09E931BA74243C87B62BBA1E035/Download.aspx" target="_blank">Pdf, subscribers only</a></div></div>
+    </div>
+
+    <script type="text/javascript">
+        SetStyle();
+        function SetStyle() {
+            //        var divMaster = document.getElementById('divPortail');
+            var divMaster = document.getElementById('divPortail');
+            divMaster.setAttribute('id', 'newsPage');
+        }
+    </script>
+                  
+            <div id="piedPage">
+              
+                <ul>
+                    <li>
+                        <a id="LBPlan" href="../../../../../84/181/0/0/About.aspx" target="_blank">Sitemap</a>
+                        |</li>
+                    <li>
+                        <a id="LbLegal" href="../../../../../84/182/0/0/About.aspx" target="_blank">Terms of use</a>
+                        |</li>
+                    <li>
+                        <a id="LbContactUS" href="../../../../../82/175/0/0/About.aspx" target="_blank">Contact</a></li>
+                    <li id="liEnglish">
+                    |<a href="#haut"><span class="retour-haut-page">Top of page</span></a>
+                    </li>
+                </ul>
+                <hr />
+            </div>
+        </div>
+    </div>
+    <div id="RadToolTip1" class=" classTooltipPosition" style="display:none;position:absolute;">
+	
+        <div id="UpdatePanel2">
+		
+                <table width="100%" cellpadding="2" cellspacing="2">
+                    <tr>
+                        <td>
+                            <span id="confTitle" class="kit-title-confirmation">Prescrire</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="border-width: thin; border: 1px solid; color: #003366;">
+                                <div style="padding: 5px;">
+                                    <span id="msg" class="kit-text-confirmation">Your change of address has been received and will be processed promptly but will not appear instantaneously</span></div>
+                                <div style="text-align: right;height:28px">
+                                    <input type="submit" name="ctl00$btnClosePopup" value="Close" onclick="CloseTooltip();" id="btnClosePopup" class="classebouton" />&nbsp;&nbsp;</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            
+	</div>
+    <input id="RadToolTip1_ClientState" name="RadToolTip1_ClientState" type="hidden" />
+</div>
+    <div id="RadToolTip2" class=" classTooltipPosition" style="display:none;position:absolute;">
+	
+        <div id="UpdatePanel1">
+		
+                <table width="100%" cellpadding="2" cellspacing="2">
+                    <tr>
+                        <td>
+                            <span id="lbTitleMsgConfirm" class="kit-title-confirmation">Prescrire</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="border-width: thin; border: 1px solid; color: #003366;">
+                                <div style="padding: 5px;">
+                                    <span id="lbMsgConfirm" class="kit-text-confirmation">Your message has been sent</span></div>
+                                <div style="text-align: right;height:28px">
+                                    <input type="submit" name="ctl00$btlCloseConfirmSendMessage" value="Close" onclick="CloseTooltip();" id="btlCloseConfirmSendMessage" class="classebouton" />&nbsp;&nbsp;</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            
+	</div>
+    <input id="RadToolTip2_ClientState" name="RadToolTip2_ClientState" type="hidden" />
+</div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":36,"clientStateFieldID":"frmCoordonneesPostale_ClientState","formID":"form1","height":"510px","iconUrl":"","initialBehaviors":4,"keepInScreenBounds":true,"left":"","minimizeIconUrl":"","modal":true,"name":"frmCoordonneesPostale","reloadOnShow":true,"showContentDuringLoad":false,"skin":"WebBlue","title":"Change your mailing address","top":"","visibleStatusbar":false,"width":"575px"}, {"close":OnClientClose,"show":WindowShow}, null, $get("frmCoordonneesPostale"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":36,"clientStateFieldID":"frmMsg_ClientState","formID":"form1","height":"534px","iconUrl":"","initialBehaviors":4,"keepInScreenBounds":true,"left":"","minimizeIconUrl":"","modal":true,"name":"frmMsg","reloadOnShow":true,"showContentDuringLoad":false,"skin":"WebBlue","title":"Send a message to the Prescrire team","top":"","visibleStatusbar":false,"width":"575px"}, {"close":OnClientClose,"show":WindowShow}, null, $get("frmMsg"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":36,"clientStateFieldID":"frmConfirmRegister_ClientState","formID":"form1","height":"200px","iconUrl":"","initialBehaviors":4,"keepInScreenBounds":true,"left":"","minimizeIconUrl":"","modal":true,"name":"frmConfirmRegister","reloadOnShow":true,"showContentDuringLoad":false,"skin":"WebBlue","title":"Online registration successfully completed.","top":"","visibleStatusbar":false,"width":"570px"}, {"close":OnClientClose}, null, $get("frmConfirmRegister"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":36,"clientStateFieldID":"frmConfirmAbonnement_ClientState","formID":"form1","height":"200px","iconUrl":"","initialBehaviors":4,"keepInScreenBounds":true,"left":"","minimizeIconUrl":"","modal":true,"name":"frmConfirmAbonnement","reloadOnShow":true,"showContentDuringLoad":false,"skin":"WebBlue","title":"Confirmation d\u0027inscription","top":"","visibleStatusbar":false,"width":"570px"}, {"close":OnClientClose}, null, $get("frmConfirmAbonnement"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":36,"clientStateFieldID":"frmConfirmKit_ClientState","formID":"form1","height":"150px","iconUrl":"","initialBehaviors":4,"keepInScreenBounds":true,"left":"","minimizeIconUrl":"","modal":true,"name":"frmConfirmKit","reloadOnShow":true,"showContentDuringLoad":false,"skin":"WebBlue","title":"Confirmation de demande de Kit Prescrire","top":"","visibleStatusbar":false,"width":"570px"}, {"close":OnClientClose}, null, $get("frmConfirmKit"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":36,"clientStateFieldID":"frmLoginFailure_ClientState","formID":"form1","height":"180px","iconUrl":"","initialBehaviors":4,"keepInScreenBounds":true,"left":"","minimizeIconUrl":"","modal":true,"name":"frmLoginFailure","reloadOnShow":true,"showContentDuringLoad":false,"skin":"WebBlue","title":"Login error","top":"","visibleStatusbar":false,"width":"600px"}, {"close":OnClientClose}, null, $get("frmLoginFailure"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindow, {"_dockMode":false,"animation":8,"behaviors":36,"clientStateFieldID":"frmManySessions_ClientState","formID":"form1","height":"220px","iconUrl":"","initialBehaviors":4,"keepInScreenBounds":true,"left":"","minimizeIconUrl":"","modal":true,"name":"frmManySessions","reloadOnShow":true,"showContentDuringLoad":false,"skin":"WebBlue","title":"Login error","top":"","visibleStatusbar":false,"width":"600px"}, {"close":OnClientClose}, null, $get("frmManySessions"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadWindowManager, {"behaviors":36,"clientStateFieldID":"RadWindowManager1_ClientState","formID":"form1","iconUrl":"","initialBehaviors":4,"left":"","minimizeIconUrl":"","modal":true,"name":"RadWindowManager1","reloadOnShow":true,"showContentDuringLoad":false,"skin":"WebBlue","top":"","windowControls":"['frmCoordonneesPostale','frmMsg','frmConfirmRegister','frmConfirmAbonnement','frmConfirmKit','frmLoginFailure','frmManySessions']"}, {"close":OnClientClose}, {"child":"frmCoordonneesPostale"}, $get("RadWindowManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"classTooltipPosition","_manualCloseButtonText":"Close","clientStateFieldID":"RadToolTip1_ClientState","formID":"form1","hideEvent":4,"modal":true,"offsetY":-1,"position":22,"relativeTo":1,"showEvent":16,"skin":"Default","width":"500px"}, {"hide":CloseAllBloc}, null, $get("RadToolTip1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadToolTip, {"_cssClass":"classTooltipPosition","_manualCloseButtonText":"Close","clientStateFieldID":"RadToolTip2_ClientState","formID":"form1","hideEvent":4,"modal":true,"offsetY":-1,"position":22,"relativeTo":1,"showEvent":16,"skin":"Default","width":"250px"}, {"hide":CloseAllBloc}, null, $get("RadToolTip2"));
+});
+//]]>
+</script>
+</form>
+
+
+</body>
+</html>
