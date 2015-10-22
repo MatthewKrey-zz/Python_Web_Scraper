@@ -24,16 +24,15 @@ class WikiScrape(object):
         return Counter(content_word_list)
 
 
-# class WikiDataFrame(object):
-#     def __init__(self, dictionary):
-#         self.dictionary = WikiScrape(page_title).get_word_count
+class WikiDataFrame(object):
+    def __init__(self, dictionary):
+        self.dictionary = dictionary
 
-def dict_to_dataframe(wiki_word_dictionary):
-    df = pd.DataFrame(wiki_word_dictionary.items(), columns=['Word', 'Word_Count'])
-    wiki_words_df = df.sort(columns="Word_Count", ascending=False)
-    return wiki_words_df
+    def dict_to_dataframe(self):
+        df = pd.DataFrame(self.dictionary.items(), columns=['Word', 'Word_Count'])
+        wiki_words_df = df.sort(columns="Word_Count", ascending=False)
+        return wiki_words_df
 
 
 wiki_word_dictionary = WikiScrape("Cancer").get_word_count()
-#WikiDataFrame(wiki_word_dictionary)
-print dict_to_dataframe(wiki_word_dictionary).to_csv('wiki_word_dictionary.csv', sep=':', index=False, index_label=None)
+print WikiDataFrame(wiki_word_dictionary).dict_to_dataframe().to_csv('wiki_word_dictionary.csv', sep=':', index=False, index_label=None)
