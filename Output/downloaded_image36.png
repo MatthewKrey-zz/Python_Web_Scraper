@@ -33,7 +33,7 @@
 	<head>
 		<title>Internet Archive Wayback Machine</title>
 		<script type="text/javascript" src="/static/js/analytics.js"></script>
-		<script type="text/javascript">archive_analytics.values.server_name="wwwb-app16.us.archive.org";archive_analytics.values.server_ms=5701;</script>
+		<script type="text/javascript">archive_analytics.values.server_name="wwwb-app18.us.archive.org";archive_analytics.values.server_ms=871;</script>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
 		<base target="_top" />
@@ -50,9 +50,9 @@
             </div>
             </section>
             <section>
-            <div id="searchHome" style="auto">
+            <div id="searchHome" style="margin-bottom: 50px">
                 <form name="form1" method="get" action="/web/form-submit.jsp">
-		    <input type="text" name="url" value="http://www.cancer.gov/cancertopics/understandingcancer/targetedtherapies/static/images/toolbar/wayback-toolbar-logo.png" size="40" onfocus="javascript:this.focus();this.select();" >
+		    <input type="text" name="url" value="http://www.barbaraehrenreich.com/cancerland.htm/static/images/toolbar/wayback-toolbar-logo.png" size="40" onfocus="javascript:this.focus();this.select();" >
 		    <button type="submit" name="type" value="replay">Latest</button>
 		    <button type="submit" name="type" value="urlquery">Show All</button>
                 </form>
@@ -64,7 +64,14 @@
                 <br/>
                 <p>Wayback Machine doesn&apos;t have that page archived.</p>            
 
-			    <p>Want to search for all archived pages under <a href="/web/form-submit.jsp?type=prefixquery&amp;url=http://www.cancer.gov/cancertopics/understandingcancer/targetedtherapies/static/images/toolbar/">http://www.cancer.gov/cancertopics/understandingcancer/targetedtherapies/static/images/toolbar/</a> ?</p>
+            <div id="livewebInfo">
+                <h2 class="blue">This page is available on the web!</h2>
+                <br/>
+                <p>Help make the Wayback Machine more complete!</p>
+                <p><b><a href="/save/http://www.barbaraehrenreich.com/cancerland.htm/static/images/toolbar/wayback-toolbar-logo.png">Save this url in the Wayback Machine</a></b></p>
+            </div>
+
+			    <p>Want to search for all archived pages under <a href="/web/form-submit.jsp?type=prefixquery&amp;url=http://www.barbaraehrenreich.com/cancerland.htm/static/images/toolbar/">http://www.barbaraehrenreich.com/cancerland.htm/static/images/toolbar/</a> ?</p>
 		
 
             </div>

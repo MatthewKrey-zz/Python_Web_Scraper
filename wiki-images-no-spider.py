@@ -6,7 +6,7 @@ import re
 from bs4 import BeautifulSoup
 from IPython import embed
 
-# Place the URL you wish to crawl here 
+# Place the URL you wish to crawl here
 BASE_URL = "https://en.wikipedia.org/wiki/Cancer"
 
 def make_soup(BASE_URL):

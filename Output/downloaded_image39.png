@@ -33,7 +33,7 @@
 	<head>
 		<title>Internet Archive Wayback Machine</title>
 		<script type="text/javascript" src="/static/js/analytics.js"></script>
-		<script type="text/javascript">archive_analytics.values.server_name="wwwb-app11.us.archive.org";archive_analytics.values.server_ms=713;</script>
+		<script type="text/javascript">archive_analytics.values.server_name="wwwb-app0.us.archive.org";archive_analytics.values.server_ms=384;</script>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
 		<base target="_top" />
@@ -52,7 +52,7 @@
             <section>
             <div id="searchHome" style="auto">
                 <form name="form1" method="get" action="/web/form-submit.jsp">
-		    <input type="text" name="url" value="http://www.cancer.gov/cancertopics/understandingcancer/targetedtherapies/static/images/toolbar/wayback-toolbar-logo.png" size="40" onfocus="javascript:this.focus();this.select();" >
+		    <input type="text" name="url" value="http://www.newsweek.com:80/id/157548/page/2/static/images/toolbar/wayback-toolbar-logo.png" size="40" onfocus="javascript:this.focus();this.select();" >
 		    <button type="submit" name="type" value="replay">Latest</button>
 		    <button type="submit" name="type" value="urlquery">Show All</button>
                 </form>
@@ -64,7 +64,7 @@
                 <br/>
                 <p>Wayback Machine doesn&apos;t have that page archived.</p>            
 
-			    <p>Want to search for all archived pages under <a href="/web/form-submit.jsp?type=prefixquery&amp;url=http://www.cancer.gov/cancertopics/understandingcancer/targetedtherapies/static/images/toolbar/">http://www.cancer.gov/cancertopics/understandingcancer/targetedtherapies/static/images/toolbar/</a> ?</p>
+			    <p>Want to search for all archived pages under <a href="/web/form-submit.jsp?type=prefixquery&amp;url=http://www.newsweek.com/id/157548/page/2/static/images/toolbar/">http://www.newsweek.com/id/157548/page/2/static/images/toolbar/</a> ?</p>
 		
 
             </div>

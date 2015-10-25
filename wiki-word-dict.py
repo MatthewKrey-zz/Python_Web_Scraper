@@ -33,6 +33,6 @@ class WikiDataFrame(object):
         wiki_words_df = df.sort(columns="Word_Count", ascending=False)
         return wiki_words_df
 
-
+# Enter Wiki page title as arg for WikiScrape()
 wiki_word_dictionary = WikiScrape("Cancer").get_word_count()
-eprint WikiDataFrame(wiki_word_dictionary).dict_to_dataframe().to_csv('wiki_word_dictionary.csv', sep=':', index=False, index_label=None)
+print WikiDataFrame(wiki_word_dictionary).dict_to_dataframe().to_csv('wiki_word_dictionary.csv', sep=':', index=False, index_label=None)

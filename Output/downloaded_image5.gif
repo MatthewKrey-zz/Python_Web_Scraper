@@ -105,8 +105,8 @@ function NhsUk_OnSubmit()
 <meta name="DCSext.RealUrl" content="/conditions/cancer/Pages/Symptoms.aspx"></meta>
 <meta name="WT.cg_n" content="Treatments and Conditions"></meta>
 <meta name="WT.cg_s" content="Cancer"></meta>
-<meta name="DCSext.Server" content="CH-P-WEB05"></meta>
-<meta name="WT.sv" content="CH-P-WEB05"></meta>
+<meta name="DCSext.Server" content="CH-P-WEB01"></meta>
+<meta name="WT.sv" content="CH-P-WEB01"></meta>
 <meta name="DCSext.BM_Section1" content="Treatments and Conditions"></meta>
 <meta name="DCSext.BM_Section2" content="Cancer"></meta>
 <meta name="DCSext.BM_Section3" content="Signs and symptoms"></meta>
@@ -292,7 +292,7 @@ function NhsUk_OnSubmit()
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
 <input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xA3D853AC20E28089EA32B28969DC53C7BAC23EBD45E7386B444BD66BA212103DE66C049F4340E8F895005F01976FC37C2F3B8607B3C474941EDB64463795B6A2,22 Oct 2015 16:14:01 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xD8CB375C5E0D461783A2ECCC0C188EE94723770C9ECDEDD865F95B51C7973340C4D3CD053D6E7D82763A7863CA4A293AF94E2CB53CB382B65578A25E348E52A3,25 Oct 2015 14:41:36 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
 <input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
@@ -366,7 +366,7 @@ $(document).ready(function() {
           <li class="print-ip"><div id="ctl00_PlaceHolderMain_headercontrol_healthAZHeaderBookmark_EasyPrint_printLinkDiv">
      
     <p id="ctl00_PlaceHolderMain_headercontrol_healthAZHeaderBookmark_EasyPrint_ptagprintclass" class="printable-version ip" title="Easy print this page">
-        <a href="/Pages/PrintPage.aspx?Site=Cancer&URL=/Conditions/Cancer&Current=Symptoms.aspx&Title=Cancer&print=635811272423497273"><span class="hidden">Print this page</span></a>
+        <a href="/Pages/PrintPage.aspx?Site=Cancer&URL=/Conditions/Cancer&Current=Symptoms.aspx&Title=Cancer&print=635813808974880136"><span class="hidden">Print this page</span></a>
     </p>
     
      
@@ -604,7 +604,7 @@ $(document).ready(function() {
           <li class="print-ip"><div id="ctl00_PlaceHolderMain_healthAZABookmark_EasyPrint_printLinkDiv">
      
     <p id="ctl00_PlaceHolderMain_healthAZABookmark_EasyPrint_ptagprintclass" class="printable-version ip" title="Easy print this page">
-        <a href="/Pages/PrintPage.aspx?Site=Cancer&URL=/Conditions/Cancer&Current=Symptoms.aspx&Title=Cancer&print=635811272425372213"><span class="hidden">Print this page</span></a>
+        <a href="/Pages/PrintPage.aspx?Site=Cancer&URL=/Conditions/Cancer&Current=Symptoms.aspx&Title=Cancer&print=635813808976442566"><span class="hidden">Print this page</span></a>
     </p>
     
      
@@ -1607,4 +1607,4 @@ Sys.Application.initialize();
 </form>
 </div>
 </body>
-</html><!-- Rendered using cache profile:NHS Choices Conditions Cache Profile at: 2015-10-22T17:14:02 -->
+</html><!-- Rendered using cache profile:NHS Choices Conditions Cache Profile at: 2015-10-25T14:41:37 -->

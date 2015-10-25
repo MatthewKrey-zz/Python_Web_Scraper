@@ -125,116 +125,8 @@
 
 			<!-- SITE NAVIGATION AREA :: START -->
 
-                                                        <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-       var country = geoplugin_countryName();
-       if (country == 'India' || country == 'Bangladesh' || country == 'Pakistan' || country == 'Sri Lanka' || country == 'Bhutan' || country == 'Nepal' || country == 'Maldives' || country == 'Iran' || country == 'Iraq' || country == 'Malaysia' || country == 'Singapore' || country == 'Thailand' || country == 'Brunei' || country == 'Indonesia' || country == 'Philippines' || country == 'Vietnam' || country == 'Cambodia' || country == 'Laos' || country == 'Myanmar') {
-           $("#hideIt").hide();
-       }
-    });
-</script>
-
-<!--
-<script>
-  (function() {
-    var cx = '018216608897022386018:qoerfmopdkg';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<style>
-    /*    
-    #gsc-i-id1 {
-        background: url("/assets/default/img/search_field.gif") no-repeat scroll 0 0 transparent !important;
-        height: 31px !important;
-        padding-left: 15px !important;
-        width: 195px !important;
-    }
-    
-    input.gsc-search-button.gsc-search-button-v2 {
-        background: url(/assets/default/img/search_mag.gif) no-repeat scroll 0 0 transparent !important;
-        width: 34px !important;
-        height: 31px !important;
-        border: 0 !important;
-        float: left !important;
-        cursor: pointer !important;
-        margin-top: -1px;
-        margin-left: -16px;
-    }*/
-    
-    
-    
-    #___gcse_0 {
-        margin-top: 12px;
-    }
-    
-    #gsc-i-id1 {
-        background: url("/assets/default/img/search_field.gif") no-repeat scroll 0 0 transparent !important;
-        height: 31px !important;
-        padding-left: 15px !important;
-        width: 195px !important;
-    }
-    
-    .gsib_b {
-        display: none;
-    }
-    
-    table.gsc-search-box td {
-        vertical-align: top;
-    }
-    
-    table.gsc-search-box {
-        margin-bottom: 0;
-    }
-    
-    #gsc-iw-id1 {
-        border: none !important;
-    }
-    
-    .gsib_a {
-        padding: 0px;
-    }
-    
-    .gsc-control-cse {
-        background: #f5f9fa url(/assets/default/css/i/pattern.png);
-    }
-    
-    .cse .gsc-control-cse, .gsc-control-cse {
-        padding: 0px;
-        border: none;
-    }
-    
-    form.gsc-search-box {
-        margin: 12px 0 0 0 !important;
-        padding-left: 10px !important;
-    }
-    
-    input.gsc-search-button.gsc-search-button-v2 {
-        background: url(/assets/default/img/search_mag.gif) no-repeat scroll 0 0 transparent !important;
-        width: 0px !important;
-        height: 0px !important;
-        border: 0 !important;
-        float: left !important;
-        cursor: pointer !important;
-        margin-top: -1px;
-        margin-left: -12px;
-        content: none !important;
-    }
-    
-    .cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
-        padding: 15px 19px !important;
-    }
-    
-</style>
--->
-			<div id="the-site-navigation" class="nav">
-				<div class="grid">
+                                                            <div id="the-site-navigation" class="nav">
+        <div class="grid">
 
             <div id="main-nav">
                 <ul id="mega">
@@ -303,8 +195,8 @@
                                                     <h2><span><a href="/journals">All Journals</a></span></h2>
                                                     
                                             </div>
-                                            <img id="hideIt" src="/assets/default/css/i/publications-image.png "style="margin-top: 23px; margin-left: 10px;"/>
-                                    </div>
+                                                                                            <img src="/assets/default/css/i/publications-image.png "style="margin-top: 23px; margin-left: 10px;"/>
+                                                                                </div>
 
 
 							 </div><!--mega inner-->
